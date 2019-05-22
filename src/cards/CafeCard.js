@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Arrowdown from '../images/arrowDown.png'
 
 const CardGrid = styled.section`
     grid-column: 2 / 3;
@@ -57,9 +58,19 @@ const CafeOpeningHours = styled.div`
     letter-spacing: 0.64px;
 `
 
+const ArrowDown = styled.img`
+    margin-left: 20px;
+    width: 8%;
+`
+
+const Table = styled.table`
+    margin-top: 5px;
+`
+
 const Day = styled.td`
     padding-right: 8px;
 `
+
 
 export default function CafeCard({src, alt, title, street, district, monTime, tueTime, wedTime, thuTime, friTime, satTime, sunTime}) {
     return (
@@ -70,39 +81,41 @@ export default function CafeCard({src, alt, title, street, district, monTime, tu
                 <CafeTitle>{title}</CafeTitle>
                 <CafeAddress>{street}<br/>{district}</CafeAddress>
             </CafeInfo>
-            <CafeOpeningHours><label>Öffnungszeiten</label>
-            <table>
-                <tbody>
-                    <tr>
-                        <Day>Mo</Day>
-                        <td>{monTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>Di</Day>
-                        <td>{tueTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>Mi</Day>
-                        <td>{wedTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>Do</Day>
-                        <td>{thuTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>Fr</Day>
-                        <td>{friTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>Sa</Day>
-                        <td>{satTime}</td>
-                    </tr>
-                    <tr>
-                        <Day>So</Day>
-                        <td>{sunTime}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <CafeOpeningHours>
+                <label>Öffnungszeiten</label>
+                <ArrowDown src={Arrowdown} />
+                <Table>
+                    <tbody>
+                        <tr>
+                            <Day>Mo</Day>
+                            <td>{monTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>Di</Day>
+                            <td>{tueTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>Mi</Day>
+                            <td>{wedTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>Do</Day>
+                            <td>{thuTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>Fr</Day>
+                            <td>{friTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>Sa</Day>
+                            <td>{satTime}</td>
+                        </tr>
+                        <tr>
+                            <Day>So</Day>
+                            <td>{sunTime}</td>
+                        </tr>
+                    </tbody>
+                </Table>
             </CafeOpeningHours>
         </CardGrid>
     )
