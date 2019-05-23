@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const CardGrid = styled.section`
+margin-bottom: 30px;
 grid-column: 2 / 3;
 display: grid;
 grid-template-columns: 25px auto 25px;
