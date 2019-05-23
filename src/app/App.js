@@ -9,7 +9,7 @@ export default function App() {
 
   return (
     <AppGrid>
-      {cards.map(card => <CafeCard card={card} /> )}
+      {cards.map(card => <CafeCard key={card._id} card={card} /> )}
     </AppGrid>
   )
 }

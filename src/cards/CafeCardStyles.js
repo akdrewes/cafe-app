@@ -20,9 +20,10 @@ z-index: 2;
 export const CardBackgroundColor = styled.div`
 height: ${props => props.shorterBackground ? '360px' : '500px'};
 width: 100%;
-background: #77A6A1;
 position: absolute;
 top: 50px;
+background: #77A6A1;
+box-shadow: 2px 3px 3px #53736A;
 `
 
 export const CafeInfo = styled.div`
