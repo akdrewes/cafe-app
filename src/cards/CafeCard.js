@@ -20,9 +20,9 @@ export default function CafeCard({src, alt, title, street, district, monTime, tu
                 <CafeAddress>{street}<br/>{district}</CafeAddress>
             </CafeInfo>
             <CafeOpeningHours>
-                <label>Öffnungszeiten</label>
+                <label htmlFor='openingHours'>Öffnungszeiten</label>
                 <Arrow onClick={onToggleOpeningHours} src={isHidden ? Arrowdown : Arrowup} />
-                <Table className={isHidden ? 'hidden' : ''}>
+                <Table id='openingHours' className={isHidden ? 'hidden' : ''}>
                     <tbody>
                         <tr>
                             <Day>Mo</Day>
