@@ -12,9 +12,9 @@ export default function CafeCard({src, alt, title, street, district, monTime, tu
     }
 
     return (
-        <CardGrid>
+        <CardGrid className={isHidden ? 'shorter' : ''}>
             <Image src={src} alt={alt} />
-            <CardBackgroundColor />
+            <CardBackgroundColor className={isHidden ? 'shorter' : ''}/>
             <CafeInfo>
                 <CafeTitle>{title}</CafeTitle>
                 <CafeAddress>{street}<br/>{district}</CafeAddress>

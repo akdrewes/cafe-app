@@ -6,6 +6,10 @@ display: grid;
 grid-template-columns: 25px auto 25px;
 height: 550px;
 position: relative;
+
+&.shorter {
+    height: 410px;
+}
 `
 
 export const Image = styled.img`
@@ -23,6 +27,10 @@ width: 100%;
 background: #77A6A1;
 position: absolute;
 top: 50px;
+
+&.shorter {
+    height: 360px;
+}
 `
 
 export const CafeInfo = styled.div`
