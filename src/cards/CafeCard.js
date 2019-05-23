@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
 import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress} from './CafeCardStyles.js'
-import OpeningHours from './OpeningHours'
+import WeeklyOpeningHours from './WeeklyOpeningHours'
 
-export default function CafeCard({src, alt, title, street, district, monTime, tueTime, wedTime, thuTime, friTime, satTime, sunTime, hide, shorterBackground, shorterCard}) {
+export default function CafeCard({card}) {
     
     const [isHidden, setOpeningHours] = useState(true)
 
-    function onToggleOpeningHours() {
+    function handleToggleOpeningHours() {
         setOpeningHours(!isHidden)
     }
 
     return (
         <CardGrid shorterCard={isHidden}>
-            <Image src={src} alt={alt} />
+            <Image src={card.src} alt={card.alt} />
             <CardBackgroundColor shorterBackground={isHidden}/>
             <CafeInfo>
-                <CafeTitle>{title}</CafeTitle>
-                <CafeAddress>{street}<br/>{district}</CafeAddress>
+                <CafeTitle>{card.title}</CafeTitle>
+                <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <OpeningHours onToggleOpeningHours={onToggleOpeningHours} hide={isHidden} monTime={monTime} tueTime={tueTime} wedTime={wedTime} thuTime={thuTime} friTime={friTime} satTime={satTime} sunTime={sunTime}/>
+            <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardGrid>
     )
 }
