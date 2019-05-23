@@ -3,7 +3,7 @@ import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress, 
 import Arrowdown from '../images/arrowDown.png'
 import Arrowup from '../images/arrowUp.png'
 
-export default function CafeCard({src, alt, title, street, district, monTime, tueTime, wedTime, thuTime, friTime, satTime, sunTime}) {
+export default function CafeCard({src, alt, title, street, district, monTime, tueTime, wedTime, thuTime, friTime, satTime, sunTime, hidden, shorterBackground, shorterCard}) {
     
     const [isHidden, setOpeningHours] = useState(true)
 
@@ -12,9 +12,9 @@ export default function CafeCard({src, alt, title, street, district, monTime, tu
     }
 
     return (
-        <CardGrid className={isHidden ? 'shorter' : ''}>
+        <CardGrid shorterCard={isHidden}>
             <Image src={src} alt={alt} />
-            <CardBackgroundColor className={isHidden ? 'shorter' : ''}/>
+            <CardBackgroundColor shorterBackground={isHidden}/>
             <CafeInfo>
                 <CafeTitle>{title}</CafeTitle>
                 <CafeAddress>{street}<br/>{district}</CafeAddress>
@@ -22,7 +22,7 @@ export default function CafeCard({src, alt, title, street, district, monTime, tu
             <CafeOpeningHours>
                 <label htmlFor='openingHours'>Öffnungszeiten</label>
                 <Arrow onClick={onToggleOpeningHours} src={isHidden ? Arrowdown : Arrowup} />
-                <Table id='openingHours' className={isHidden ? 'hidden' : ''}>
+                <Table id='openingHours' hidden={isHidden}>
                     <tbody>
                         <tr>
                             <Day>Mo</Day>

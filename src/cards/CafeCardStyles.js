@@ -4,12 +4,8 @@ export const CardGrid = styled.section`
 grid-column: 2 / 3;
 display: grid;
 grid-template-columns: 25px auto 25px;
-height: 550px;
+height: ${props => props.shorterCard ? '410px' : '550px'};
 position: relative;
-
-&.shorter {
-    height: 410px;
-}
 `
 
 export const Image = styled.img`
@@ -22,15 +18,11 @@ z-index: 2;
 `
 
 export const CardBackgroundColor = styled.div`
-height: 500px;
+height: ${props => props.shorterBackground ? '360px' : '500px'};
 width: 100%;
 background: #77A6A1;
 position: absolute;
 top: 50px;
-
-&.shorter {
-    height: 360px;
-}
 `
 
 export const CafeInfo = styled.div`
@@ -71,10 +63,7 @@ width: 8%;
 
 export const Table = styled.table`
 margin-top: 5px;
-
-&.hidden {
-    display: none !important;
-}
+display: ${props => props.hidden ? 'none !important' : ''}
 `
 
 export const Day = styled.td`
