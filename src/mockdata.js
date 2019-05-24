@@ -6,6 +6,9 @@ const mockdata = {
             title: `North Coast Coffee Roastery`,
             street: `Deichstraße 9`,
             district: `20459 Hamburg, Hamburg Mitte`,
+            workAtmosphere: `4`,
+            wlan: `3`,
+            coffee: `5`,
             openingHours: [
                 {day:"Mo",time: `09:00 - 18:00`},
                 {day:"Di",time: `09:00 - 18:00`},
@@ -22,6 +25,9 @@ const mockdata = {
             title: `North Coast Coffee Roastery`,
             street: `Deichstraße 9`,
             district: `20459 Hamburg, Hamburg Mitte`,
+            workAtmosphere: `4`,
+            wlan: `3`,
+            coffee: `5`,
             openingHours: [
                 {day:"Mo",time: `09:00 - 18:00`},
                 {day:"Di",time: `09:00 - 18:00`},
@@ -38,6 +44,9 @@ const mockdata = {
             title: `North Coast Coffee Roastery`,
             street: `Deichstraße 9`,
             district: `20459 Hamburg, Hamburg Mitte`,
+            workAtmosphere: `4`,
+            wlan: `3`,
+            coffee: `5`,
             openingHours: [
                 {day:"Mo",time: `09:00 - 18:00`},
                 {day:"Di",time: `09:00 - 18:00`},

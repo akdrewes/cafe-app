@@ -53,6 +53,8 @@ grid-column: 2 / 3;
 position: absolute;
 top: 370px;
 height: 80px;
+display: grid;
+grid-template-columns: 40% 60%;
 `
 
 export const CafeOpeningHours = styled.div`
