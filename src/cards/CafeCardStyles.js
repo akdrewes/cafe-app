@@ -5,7 +5,7 @@ margin-bottom: 30px;
 grid-column: 2 / 3;
 display: grid;
 grid-template-columns: 25px auto 25px;
-height: ${props => props.shorterCard ? '410px' : '550px'};
+height: ${props => props.shorterCard ? '480px' : '630px'};
 position: relative;
 `
 
@@ -19,7 +19,7 @@ z-index: 2;
 `
 
 export const CardBackgroundColor = styled.div`
-height: ${props => props.shorterBackground ? '360px' : '500px'};
+height: ${props => props.shorterBackground ? '430px' : '580px'};
 width: 100%;
 position: absolute;
 top: 50px;
@@ -48,10 +48,17 @@ font-size: 14px;
 letter-spacing: 0.64px;
 `
 
-export const CafeOpeningHours = styled.div`
+export const CafeRating  = styled.section`
 grid-column: 2 / 3;
 position: absolute;
 top: 370px;
+height: 80px;
+`
+
+export const CafeOpeningHours = styled.div`
+grid-column: 2 / 3;
+position: absolute;
+top: 450px;
 color: #E4E9F2;
 font-family: Tahoma, sans-serif;
 font-size: 14px;

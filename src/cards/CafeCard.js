@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress} from './CafeCardStyles.js'
+import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress, CafeRating} from './CafeCardStyles.js'
+import Rating from './Rating'
 import WeeklyOpeningHours from './WeeklyOpeningHours'
 
 export default function CafeCard({card}) {
@@ -18,6 +19,9 @@ export default function CafeCard({card}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
+            <CafeRating>
+                <Rating />
+            </CafeRating>
             <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardGrid>
     )
