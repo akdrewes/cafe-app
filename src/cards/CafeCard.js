@@ -22,7 +22,7 @@ export default function CafeCard({card}) {
             </CafeInfo>
             <CafeRating>
                 <Labels />
-                <Rating />
+                <Rating rating={card.rating}/>
             </CafeRating>
             <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardGrid>

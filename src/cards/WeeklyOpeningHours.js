@@ -12,7 +12,7 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
             <Arrow onClick={onToggleOpeningHours} src={hidden ? Arrowdown : Arrowup} />
             <Table id='openingHours' hidden={hidden}>
                 <tbody>
-                    {openingHours.map(daytime => <DailyOpeningHours key={daytime._id} day={daytime.day} time={daytime.time}/>)}
+                    {openingHours.map(daytime => <DailyOpeningHours day={daytime.day} time={daytime.time}/>)}
                 </tbody>
             </Table>
         </CafeOpeningHours>

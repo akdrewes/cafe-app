@@ -12,7 +12,7 @@ export default function App() {
     <>
       <GlobalStyles />
       <AppGrid>
-        {cards.map(card => <CafeCard key={card._id} card={card} /> )}
+        {cards.map(card => <CafeCard key={card.street} card={card} /> )}
       </AppGrid>
     </>
   )

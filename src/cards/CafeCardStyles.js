@@ -5,7 +5,7 @@ margin-bottom: 30px;
 grid-column: 2 / 3;
 display: grid;
 grid-template-columns: 25px auto 25px;
-height: ${props => props.shorterCard ? '480px' : '630px'};
+height: ${props => props.shorterCard ? '490px' : '640px'};
 position: relative;
 `
 
@@ -19,7 +19,7 @@ z-index: 2;
 `
 
 export const CardBackgroundColor = styled.div`
-height: ${props => props.shorterBackground ? '430px' : '580px'};
+height: ${props => props.shorterBackground ? '440px' : '590px'};
 width: 100%;
 position: absolute;
 top: 50px;
@@ -58,6 +58,7 @@ grid-template-columns: 40% 60%;
 `
 
 export const CafeOpeningHours = styled.div`
+padding-top: 10px;
 grid-column: 2 / 3;
 position: absolute;
 top: 450px;
