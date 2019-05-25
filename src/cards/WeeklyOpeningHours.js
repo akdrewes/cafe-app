@@ -8,8 +8,10 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
 
     return(
         <CafeOpeningHours>
-            <label htmlFor='openingHours'>Öffnungszeiten</label>
-            <Arrow onClick={onToggleOpeningHours} src={hidden ? Arrowdown : Arrowup} />
+            <div onClick={onToggleOpeningHours}>
+                <label htmlFor='openingHours'>Öffnungszeiten</label>
+                <Arrow src={hidden ? Arrowdown : Arrowup} />
+            </div>
             <Table id='openingHours' hidden={hidden}>
                 <tbody>
                     {openingHours.map(daytime => <DailyOpeningHours day={daytime.day} time={daytime.time}/>)}
