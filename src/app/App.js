@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import GlobalStyles, {FadeOut, FadeIn} from '../misc/GlobalStyles'
-import CafeCard from '../cards/CafeCard'
+import GlobalStyles, {FadeIn, FadeOut} from '../misc/GlobalStyles'
 import AppGrid from './AppGrid'
 import mockdata from '../mockdata'
+import CafeCard from '../cards/CafeCard'
 import FadeinImage from '../images/fadein.png'
 import FadeoutImage from '../images/fadeout.png'
 

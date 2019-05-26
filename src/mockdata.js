@@ -22,7 +22,7 @@ const mockdata = {
             ]
         },
         {
-            src: `images/christin-hume-505823-unsplash.jpg`,
+            src: `images/starbucks.jpeg`,
             alt: `Café Image`,
             title: `Starbucks Jungfernstieg`,
             street: `Neuer Jungfernstieg 5`,
@@ -43,7 +43,7 @@ const mockdata = {
             ]
         },
         {
-            src: `images/christin-hume-505823-unsplash.jpg`,
+            src: `images/publiccoffee2.jpeg`,
             alt: `Café Image`,
             title: `Public Coffee Roasters`,
             street: `Brandstwiete 3`,
@@ -85,7 +85,7 @@ const mockdata = {
             ]
         },
         {
-            src: `images/christin-hume-505823-unsplash.jpg`,
+            src: `images/coffeeshop.jpeg`,
             alt: `Café Image`,
             title: `The Coffee Shop`,
             street: `Poststraße 6A`,

@@ -7,12 +7,12 @@ import CupIcon from '../images/CupY.png'
 const Button = styled.div`
 grid-row: 1 / 2;
 grid-column: 2 / 3;
+display: flex;
+justify-content: flex-end;
 color: #53736A;
 font-family: Tahoma, sans-serif;
 font-size: 12px;
 letter-spacing: 0.64px;
-display: flex;
-justify-content: flex-end;
 `
 
 const AllRatings = styled.div`
