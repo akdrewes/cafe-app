@@ -30,8 +30,9 @@ box-shadow: 2px 3px 3px #53736A;
 export const CafeInfo = styled.div`
 grid-column: 2 / 3;
 position: absolute;
-top: 250px;
 text-align: center;
+width: 100%;
+top: 250px;
 color: #E4E9F2;
 `
 

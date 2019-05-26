@@ -2,7 +2,7 @@ const mockdata = {
     cafeList: [
         {
             src: `images/christin-hume-505823-unsplash.jpg`,
-            alt: `Café Image`,
+            alt: `Café Image of North Coast Coffee Roastery`,
             title: `North Coast Coffee Roastery`,
             street: `Deichstraße 8`,
             district: `20459 Hamburg, Hamburg Mitte`,
@@ -23,7 +23,7 @@ const mockdata = {
         },
         {
             src: `images/starbucks.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of Starbucks Jungfernstieg`,
             title: `Starbucks Jungfernstieg`,
             street: `Neuer Jungfernstieg 5`,
             district: `20354 Hamburg, Hamburg Mitte`,
@@ -44,7 +44,7 @@ const mockdata = {
         },
         {
             src: `images/publiccoffee2.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of Public Coffee Roasters`,
             title: `Public Coffee Roasters`,
             street: `Brandstwiete 3`,
             district: `20457 Hamburg, Hamburg Mitte`,
@@ -65,8 +65,8 @@ const mockdata = {
         },
         {
             src: `images/christin-hume-505823-unsplash.jpg`,
-            alt: `Café Image`,
-            title: `Park Café im Park bei Sonne`,
+            alt: `Café Image of Park Café`,
+            title: `Park Café`,
             street: `Holstenwall 30`,
             district: `20355 Hamburg, Hamburg Mitte`,
             rating: {
@@ -86,7 +86,7 @@ const mockdata = {
         },
         {
             src: `images/coffeeshop.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of The Coffee Shop`,
             title: `The Coffee Shop`,
             street: `Poststraße 6A`,
             district: `20354 Hamburg, Hamburg Mitte`,
