@@ -49,17 +49,6 @@ font-size: 14px;
 letter-spacing: 0.64px;
 `
 
-export const CafeRating  = styled.section`
-grid-column: 2 / 3;
-position: absolute;
-top: 370px;
-height: 100px;
-display: grid;
-grid-template-columns: 45% 55%;
-grid-template-rows: 20% 80%;
-grid-gap: 5px;
-`
-
 export const CafeOpeningHours = styled.div`
 padding-top: 30px;
 grid-column: 2 / 3;

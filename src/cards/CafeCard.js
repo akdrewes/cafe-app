@@ -1,20 +1,14 @@
 import React, { useState } from 'react'
-import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress, CafeRating} from './CafeCardStyles.js'
-import Labels from './Labels'
-import Rating from './Rating'
+import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress} from './CafeCardStyles.js'
+import CafeRating from './CafeRating'
 import WeeklyOpeningHours from './WeeklyOpeningHours'
 
 export default function CafeCard({card}) {
     
     const [isHidden, setOpeningHours] = useState(true)
-    const [isOff, setRating] = useState(true)
 
     function handleToggleOpeningHours() {
         setOpeningHours(!isHidden)
-    }
-
-    function handleToggleRating() {
-        setRating(!isOff)
     }
 
     return (
@@ -25,10 +19,7 @@ export default function CafeCard({card}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <CafeRating>
-                <Labels />
-                <Rating rating={card.rating} onToggleRating={handleToggleRating} off={isOff}/>
-            </CafeRating>
+            <CafeRating rating={card.rating} />
             <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardGrid>
     )

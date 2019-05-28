@@ -7,7 +7,23 @@ import WlanIconDisabled from '../images/WLANN.png'
 import CupIcon from '../images/CupY.png'
 import CupIconDisabled from '../images/CupN.png'
 
-const SingleRating = styled.div`
+const RatingCategory = styled.div`
+display: grid;
+grid-template-columns: 45% 55%;
+`
+
+const Label = styled.label`
+grid-column: 1 / 2;
+display: flex;
+align-items: center;
+color: #E4E9F2;
+font-family: Tahoma, sans-serif;
+font-size: 14px;
+letter-spacing: 0.64px;
+`
+
+const Rating = styled.div`
+grid-column: 2 / 3;
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 `
@@ -39,30 +55,39 @@ export default function DynamicRating() {
     const iconsArray = new Array(5).fill('');
     
     const handleToggleWorkIcon = (index1) => {
-        setActiveWorkIndex(index1);
+        setActiveWorkIndex(null || index1);
     }
 
     const handleToggleWlanIcon = (index2) => {
-        setActiveWlanIndex(index2);
+        setActiveWlanIndex(null || index2);
     }
 
     const handleToggleCupIcon = (index3) => {
-        setActiveCupIndex(index3);
+        setActiveCupIndex(null || index3);
     }
 
     return (
         <>
-            <SingleRating>
+            <RatingCategory>
+                <Label>Arbeitsklima</Label>
+                <Rating>
                 {iconsArray.map((icon, index1) => <WorkIconStyle onClick={() => handleToggleWorkIcon(index1)} src={index1 <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
-            </SingleRating>
+                </Rating>
+            </RatingCategory>
 
-            <SingleRating>
+            <RatingCategory>
+                <Label>WLAN</Label>
+                <Rating>
                 {iconsArray.map((icon, index2) => <WlanIconStyle onClick={() => handleToggleWlanIcon(index2)} src={index2 <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
-            </SingleRating>
+                </Rating>
+            </RatingCategory>
 
-            <SingleRating>
+            <RatingCategory>
+                <Label>Kaffee</Label>
+                <Rating>
                 {iconsArray.map((icon, index3) => <CupIconStyle onClick={() => handleToggleCupIcon(index3)} src={index3 <= activeCupIndex ? CupIcon : CupIconDisabled} /> )}
-            </SingleRating>
+                </Rating>
+            </RatingCategory>
         </>
     )
 }
