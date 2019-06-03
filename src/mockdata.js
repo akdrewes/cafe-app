@@ -2,7 +2,7 @@ const mockdata = {
     cafeList: [
         {
             src: `images/christin-hume-505823-unsplash.jpg`,
-            alt: `Café Image`,
+            alt: `Café Image of North Coast Coffee Roastery`,
             title: `North Coast Coffee Roastery`,
             street: `Deichstraße 8`,
             district: `20459 Hamburg, Hamburg Mitte`,
@@ -23,12 +23,12 @@ const mockdata = {
         },
         {
             src: `images/starbucks.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of Starbucks Jungfernstieg`,
             title: `Starbucks Jungfernstieg`,
             street: `Neuer Jungfernstieg 5`,
             district: `20354 Hamburg, Hamburg Mitte`,
             rating: {
-                workAtmosphere: 4,
+                workAtmosphere: 3,
                 wlan: 5,
                 coffee: 3,
             },
@@ -44,12 +44,12 @@ const mockdata = {
         },
         {
             src: `images/publiccoffee2.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of Public Coffee Roasters`,
             title: `Public Coffee Roasters`,
             street: `Brandstwiete 3`,
             district: `20457 Hamburg, Hamburg Mitte`,
             rating: {
-                workAtmosphere: 5,
+                workAtmosphere: 3,
                 wlan: 4,
                 coffee: 5,
             },
@@ -65,12 +65,12 @@ const mockdata = {
         },
         {
             src: `images/christin-hume-505823-unsplash.jpg`,
-            alt: `Café Image`,
-            title: `Park Café im Park bei Sonne`,
+            alt: `Café Image of Park Café`,
+            title: `Park Café`,
             street: `Holstenwall 30`,
             district: `20355 Hamburg, Hamburg Mitte`,
             rating: {
-                workAtmosphere: 4,
+                workAtmosphere: 3,
                 wlan: 3,
                 coffee: 2,
             },
@@ -86,7 +86,7 @@ const mockdata = {
         },
         {
             src: `images/coffeeshop.jpeg`,
-            alt: `Café Image`,
+            alt: `Café Image of The Coffee Shop`,
             title: `The Coffee Shop`,
             street: `Poststraße 6A`,
             district: `20354 Hamburg, Hamburg Mitte`,
@@ -103,6 +103,27 @@ const mockdata = {
                 {day:"Fr",time: `08:00 - 20:00`},
                 {day:"Sa",time: `09:00 - 21:00`},
                 {day:"So",time: `11:00 - 19:00`},
+            ]
+        },
+        {
+            src: `images/campussuite.jpg`,
+            alt: `Café Image of Campus Suite Stephansplatz`,
+            title: `Campus Suite Stephansplatz`,
+            street: `Stephansplatz 2-8`,
+            district: `20354 Hamburg, Hamburg Mitte`,
+            rating: {
+                workAtmosphere: 5,
+                wlan: 3,
+                coffee: 4,
+            },
+            openingHours: [
+                {day:"Mo",time: `06:30 - 20:00`},
+                {day:"Di",time: `06:30 - 20:00`},
+                {day:"Mi",time: `06:30 - 20:00`},
+                {day:"Do",time: `06:30 - 20:00`},
+                {day:"Fr",time: `06:30 - 20:00`},
+                {day:"Sa",time: `08:30 - 20:00`},
+                {day:"So",time: `09:30 - 19:00`},
             ]
         }
     ]
