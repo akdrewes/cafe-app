@@ -13,7 +13,7 @@ export default function CafeCard({card}) {
 
     return (
         <CardGrid shorterCard={isHidden}>
-            <Image src={card.src} alt={card.alt} />
+            <Image src={card.img} alt={card.alt} />
             <CardBackgroundColor shorterBackground={isHidden}/>
             <CafeInfo>
                 <CafeTitle>{card.title}</CafeTitle>

@@ -1,9 +1,8 @@
 const mongoose = require('mongoose')
 
 const cardSchema = new  mongoose.Schema({
-    src: {
-        type: Buffer,
-        contentType: String,
+    img: {
+        type: String,
     },
     alt: {
         type: String,
