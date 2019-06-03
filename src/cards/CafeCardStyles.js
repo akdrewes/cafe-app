@@ -67,7 +67,7 @@ export const RatingButton = styled.button`
     display: flex;
     justify-content: flex-end;
     padding: 0;
-    color: ${props => props.color ? '#53736A' : '#E4E9F2'};
+    color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
     font-family: Tahoma, sans-serif;
     font-size: 12px;
     letter-spacing: 0.64px;

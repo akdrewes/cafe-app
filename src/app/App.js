@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {getCards, postCard, getLocal, setLocal} from '../services'
+import {getCards, getLocal, setLocal} from '../services'
 import GlobalStyles, {FadeIn, FadeOut} from '../misc/GlobalStyles'
 import AppGrid from './AppGrid'
 import CafeCard from '../cards/CafeCard'
