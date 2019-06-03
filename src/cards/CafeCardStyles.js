@@ -59,7 +59,7 @@ export const CafeRatingStyle  = styled.section`
     grid-row-gap: 5px;
     grid-template-columns: 1fr;
     /*background: rgba(83,115,106,0.4);
-    outline: rgba(83,115,106,0.4) solid 13px;*/
+    outline: rgba(83,115,106,0.4) solid 6px;*/
 `
 
 export const RatingButton = styled.button`
