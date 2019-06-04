@@ -37,21 +37,21 @@ export default function DynamicRating() {
             <RatingCategory>
                 <Label>Arbeitsklima</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WorkIconStyle onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
 
             <RatingCategory>
                 <Label>WLAN</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WlanIconStyle onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <WlanIconStyle key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
 
             <RatingCategory>
                 <Label>Kaffee</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <CupIconStyle onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
         </>
