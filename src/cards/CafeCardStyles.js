@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const CardGrid = styled.section`
     margin-bottom: 30px;
-    grid-column: 2 / 3;
     display: grid;
     grid-template-columns: 25px auto 25px;
     height: ${props => props.shorterCard ? '520px' : '670px'};
@@ -50,7 +49,8 @@ export const CafeAddress = styled.p`
 `
 
 export const CafeRatingStyle  = styled.section`
-    grid-column: 2 / 3;
+    padding-left: 25px;
+    padding-right: 25px;
     position: absolute;
     top: 370px;
     height: 100px;
@@ -67,7 +67,7 @@ export const RatingButton = styled.button`
     display: flex;
     justify-content: flex-end;
     padding: 0;
-    color: ${props => props.color ? '#53736A' : '#E4E9F2'};
+    color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
     font-family: Tahoma, sans-serif;
     font-size: 12px;
     letter-spacing: 0.64px;
