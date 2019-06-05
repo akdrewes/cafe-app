@@ -4,25 +4,26 @@ import WorkIcon from '../images/WorkAtmosphereY.png'
 import WlanIcon from '../images/WLANY.png'
 import CupIcon from '../images/CupY.png'
 
-export default function StaticRating({counter, score}) {
+export default function StaticRating({score, counter}) {
 
-    const rating = [Math.round(score[0]/counter), Math.round(score[1]/counter), Math.round(score[2]/counter)]
+    const {workAtmosphere, wlan, coffee} = score
+    const rating = [Math.round(workAtmosphere/counter), Math.round(wlan/counter), Math.round(coffee/counter)]
     
     return (
         <>
             <RatingCategory>
                 <Label>Arbeitsklima</Label>
-                <Rating>{new Array(rating[0]).fill('').map((o, index) => <WorkIconStyle key={index} src={WorkIcon} /> )}</Rating>
+                <Rating>{new Array(rating[0]).fill('').map((placeholder, index) => <WorkIconStyle key={index} src={WorkIcon} /> )}</Rating>
             </RatingCategory>
 
             <RatingCategory>
                 <Label>WLAN</Label>
-                <Rating>{new Array(rating[1]).fill('').map((o, index) => <WlanIconStyle key={index} src={WlanIcon} /> )}</Rating>
+                <Rating>{new Array(rating[1]).fill('').map((placeholder, index) => <WlanIconStyle key={index} src={WlanIcon} /> )}</Rating>
             </RatingCategory>
             
             <RatingCategory>
                 <Label>Kaffee</Label>
-                <Rating>{new Array(rating[2]).fill('').map((o, index) => <CupIconStyle key={index} src={CupIcon} /> )}</Rating>
+                <Rating>{new Array(rating[2]).fill('').map((placeholder, index) => <CupIconStyle key={index} src={CupIcon} /> )}</Rating>
             </RatingCategory> 
         </>
     )

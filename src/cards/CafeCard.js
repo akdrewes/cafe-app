@@ -3,7 +3,7 @@ import {CardGrid, Image, CardBackgroundColor, CafeInfo, CafeTitle, CafeAddress} 
 import CafeRating from './CafeRating'
 import WeeklyOpeningHours from './WeeklyOpeningHours'
 
-export default function CafeCard({card}) {
+export default function CafeCard({card, handleChanges}) {
     
     const [isHidden, setOpeningHours] = useState(true)
 
@@ -19,7 +19,7 @@ export default function CafeCard({card}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <CafeRating rating={card.rating} />
+            <CafeRating score={card.score} counter={card.counter} cardId={card._id} handleChanges={handleChanges} />
             <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardGrid>
     )

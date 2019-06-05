@@ -49,8 +49,7 @@ export const CafeAddress = styled.p`
 `
 
 export const CafeRatingStyle  = styled.section`
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0 25px;
     position: absolute;
     top: 370px;
     height: 100px;
@@ -70,6 +69,7 @@ export const RatingButton = styled.button`
     color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
     font-family: Tahoma, sans-serif;
     font-size: 12px;
+    font-style: italic;
     letter-spacing: 0.64px;
 `
 

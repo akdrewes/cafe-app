@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {getCards, getLocal, setLocal} from '../services'
+import {getCards, patchCard, getLocal, setLocal} from '../services'
 import GlobalStyles, {FadeIn, FadeOut} from '../misc/GlobalStyles'
 import AppGrid from './AppGrid'
 import CafeCard from '../cards/CafeCard'
@@ -19,12 +19,27 @@ export default function App() {
     setLocal('cards', cards)
   }, [cards])
 
+  const handleChanges = (score, counter, id) => {
+    console.log(score, counter, id)
+
+    patchCard(score, counter, id)
+    .then(changedCard => {
+      const index = cards.findIndex(oldCard => oldCard._id === changedCard._id)
+      setCards([
+        ...cards.slice(0, index),
+        changedCard,
+        ...cards.slice(index + 1)
+      ])
+    })
+    .catch(err => console.log(err))
+  }
+
   return (
     <>
       <GlobalStyles />
       <FadeIn src={FadeinImage} />
       <AppGrid>
-        {cards.map(card => <CafeCard key={card._id} card={card} /> )}
+        {cards.map(card => <CafeCard key={card._id} card={card} handleChanges={handleChanges}/> )}
       </AppGrid>
       <FadeOut src={FadeoutImage} />
     </>
