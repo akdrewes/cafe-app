@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CardStyle = styled.section`
     margin-bottom: 30px;
-    height: ${props => props.shorterCard ? '520px' : '670px'};
+    height: ${props => props.shorterCard ? '540px' : '690px'};
     position: relative;
 `
 
@@ -16,7 +16,7 @@ export const Image = styled.img`
 `
 
 export const CardBackgroundColor = styled.div`
-    height: ${props => props.shorterBackground ? '470px' : '620px'};
+    height: ${props => props.shorterBackground ? '490px' : '640px'};
     width: 100%;
     position: absolute;
     top: 50px;
@@ -115,7 +115,7 @@ export const CupIconStyle = styled.img`
 export const CafeOpeningHours = styled.div`
     padding: 0 25px;
     position: absolute;
-    top: 490px;
+    top: 500px;
     color: #E4E9F2;
     font-family: Tahoma, sans-serif;
     font-size: 14px;
