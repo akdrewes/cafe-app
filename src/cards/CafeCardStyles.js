@@ -60,9 +60,7 @@ export const CafeRatingStyle  = styled.section`
 `
 
 export const RatingButton = styled.button`
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
+    justify-self: end;
     color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
     font-family: Tahoma, sans-serif;
     font-size: 12px;
@@ -104,7 +102,6 @@ export const WorkIconStyle = styled.img`
 `
 
 export const WlanIconStyle = styled.img`
-    height: 70%;
     width: 90%;
     align-self: center;
 `
@@ -116,9 +113,9 @@ export const CupIconStyle = styled.img`
 `
 
 export const CafeOpeningHours = styled.div`
-    padding: 30px 25px 0;
+    padding: 0 25px;
     position: absolute;
-    top: 460px;
+    top: 490px;
     color: #E4E9F2;
     font-family: Tahoma, sans-serif;
     font-size: 14px;
