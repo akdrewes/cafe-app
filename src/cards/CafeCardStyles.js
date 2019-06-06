@@ -1,9 +1,7 @@
 import styled from 'styled-components'
 
-export const CardGrid = styled.section`
+export const CardStyle = styled.section`
     margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: 25px auto 25px;
     height: ${props => props.shorterCard ? '520px' : '670px'};
     position: relative;
 `
@@ -27,7 +25,7 @@ export const CardBackgroundColor = styled.div`
 `
 
 export const CafeInfo = styled.div`
-    grid-column: 2 / 3;
+    padding: 0 25px;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -62,7 +60,6 @@ export const CafeRatingStyle  = styled.section`
 `
 
 export const RatingButton = styled.button`
-    grid-row: 1 / 2;
     display: flex;
     justify-content: flex-end;
     padding: 0;
@@ -119,8 +116,7 @@ export const CupIconStyle = styled.img`
 `
 
 export const CafeOpeningHours = styled.div`
-    padding-top: 30px;
-    grid-column: 2 / 3;
+    padding: 30px 25px 0;
     position: absolute;
     top: 460px;
     color: #E4E9F2;

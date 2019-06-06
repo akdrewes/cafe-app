@@ -5,7 +5,7 @@ import {CafeRatingStyle, RatingButton, AllRatings} from './CafeCardStyles.js'
 import StaticRating from './StaticRating'
 import DynamicRating from './DynamicRating'
 
-export default function CafeRating({score, counter, cardId, handleChanges}) {
+export default function CafeRating({score, counter, cardId, handleRatingChanges}) {
 
     const {workAtmosphere, wlan, coffee} = score
     const [isStatic, setIsStatic] = useState(true)
@@ -13,15 +13,15 @@ export default function CafeRating({score, counter, cardId, handleChanges}) {
     function handleToggleRating() {
         setIsStatic(!isStatic)
         if (!isStatic) {
-            handleRating()
+            handleUserRating()
         }
     }
 
-    function handleRating() {
+    function handleUserRating() {
         const userRating = getLocal('userRating')
         const newScore = {workAtmosphere: workAtmosphere + userRating[0], wlan: wlan + userRating[1], coffee: coffee + userRating[2]}
         const newCounter = counter + 1
-        handleChanges(newScore, newCounter, cardId)
+        handleRatingChanges(newScore, newCounter, cardId)
     }
 
     return (
