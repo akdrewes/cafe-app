@@ -19,7 +19,7 @@ export default function CafeCard({card, handleRatingChanges}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <CafeRating score={card.score} counter={card.counter} cardId={card._id} handleRatingChanges={handleRatingChanges} />
+            <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={handleRatingChanges} />
             <WeeklyOpeningHours onToggleOpeningHours={handleToggleOpeningHours} hidden={isHidden} openingHours={card.openingHours} />
         </CardStyle>
     )

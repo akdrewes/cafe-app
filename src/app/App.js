@@ -17,7 +17,6 @@ export default function App() {
     .catch(err => console.log(err))}, [])
 
   const handleRatingChanges = (score, counter, id) => {
-    console.log(score, counter, id)
     patchCard(score, counter, id)
     .then(changedCard => {
       const index = cards.findIndex(currCard => currCard._id === changedCard._id)
@@ -31,7 +30,6 @@ export default function App() {
   }
 
   const handleCreateCard = (img, alt, title, street, district, score, counter, openingHours) => {
-    console.log(img, alt, title, street, district, score, counter, openingHours)
     postCard({img, alt, title, street, district, score, counter, openingHours})
     .then(card => setCards([card, ...cards]))
     .catch(err => console.log(err))

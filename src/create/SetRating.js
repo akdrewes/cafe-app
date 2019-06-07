@@ -10,26 +10,26 @@ import CupIconDisabled from '../images/CupN.png'
 
 export default function SetRating() {
 
-    const [actWorkIndex, setActWorkIndex] = useState(-1)
-    const [actWlanIndex, setActWlanIndex] = useState(-1)
-    const [actCoffeeIndex, setActCoffeeIndex] = useState(-1)
+    const [activeWorkIndex, setActiveWorkIndex] = useState(-1)
+    const [activeWlanIndex, setActiveWlanIndex] = useState(-1)
+    const [activeCoffeeIndex, setActiveCoffeeIndex] = useState(-1)
     
     useEffect(() => {
-        setLocal('firstRating', [actWorkIndex + 1, actWlanIndex + 1, actCoffeeIndex + 1])
-    }, [actWorkIndex, actWlanIndex, actCoffeeIndex])
+        setLocal('firstRating', [activeWorkIndex + 1, activeWlanIndex + 1, activeCoffeeIndex + 1])
+    }, [activeWorkIndex, activeWlanIndex, activeCoffeeIndex])
 
     const iconsArray = new Array(5).fill('')
 
     const handleToggleWorkIcon = (index) => {
-        setActWorkIndex(index)
+        setActiveWorkIndex(index)
     }
 
     const handleToggleWlanIcon = (index) => {
-        setActWlanIndex(index)
+        setActiveWlanIndex(index)
     }
 
     const handleToggleCoffeeIcon = (index) => {
-        setActCoffeeIndex(index)
+        setActiveCoffeeIndex(index)
     }
 
     return (
@@ -37,21 +37,21 @@ export default function SetRating() {
             <RatingCategory>
                 <Label>Arbeitsklima</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= actWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
 
             <RatingCategory>
                 <Label>WLAN</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WlanIconStyle key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= actWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <WlanIconStyle key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
 
             <RatingCategory>
                 <Label>Kaffee</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= actCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
                 </Rating>
             </RatingCategory>
         </>
