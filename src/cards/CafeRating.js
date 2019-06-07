@@ -5,32 +5,31 @@ import {CafeRatingStyle, RatingButton, AllRatings} from './CafeCardStyles.js'
 import StaticRating from './StaticRating'
 import DynamicRating from './DynamicRating'
 
-export default function CafeRating({rating}) {
+export default function CafeRating({score, counter, cardId, handleRatingChanges}) {
 
-    const {workAtmosphere, wlan, coffee} = rating
+    const {workAtmosphere, wlan, coffee} = score
     const [isStatic, setIsStatic] = useState(true)
-    const [counter, setCounter] = useState(1)
-    const [score, setScore] = useState([workAtmosphere,  wlan, coffee])
 
     function handleToggleRating() {
         setIsStatic(!isStatic)
         if (!isStatic) {
-            setCounter(counter + 1)
-            handleRating()
+            handleUserRating()
         }
     }
 
-    function handleRating() {
+    function handleUserRating() {
         const userRating = getLocal('userRating')
-        setScore([score[0] + userRating[0], score[1] + userRating[1], score[2] + userRating[2]])
+        const newScore = {workAtmosphere: workAtmosphere + userRating[0], wlan: wlan + userRating[1], coffee: coffee + userRating[2]}
+        const newCounter = counter + 1
+        handleRatingChanges(newScore, newCounter, cardId)
     }
 
     return (
         <OutsideClickHandler onOutsideClick={() => setIsStatic(true)} >
-        <CafeRatingStyle>
-            <RatingButton onClick={handleToggleRating} colour={isStatic}><em>{isStatic ? "Bewertung abgeben" : "POSTEN"}</em></RatingButton>
-            <AllRatings >{isStatic ? <StaticRating counter={counter} score={score}/> : <DynamicRating />}</AllRatings>
-        </CafeRatingStyle>
+            <CafeRatingStyle>
+                <RatingButton onClick={handleToggleRating} colour={isStatic}>{isStatic ? "Bewertung abgeben" : "POSTEN"}</RatingButton>
+                <AllRatings >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</AllRatings>
+            </CafeRatingStyle>
         </OutsideClickHandler>
     )
 }

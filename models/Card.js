@@ -22,10 +22,13 @@ const cardSchema = new  mongoose.Schema({
         required: true,
         get: value => value.toUpperCase(),
     },
-    rating: {
+    score: {
         workAtmosphere: Number,
         wlan: Number,
         coffee: Number,
+    },
+    counter: {
+        type: Number,
     },
     openingHours: [
         {day: String, time: String},

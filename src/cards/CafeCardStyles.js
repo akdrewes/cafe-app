@@ -1,10 +1,8 @@
 import styled from 'styled-components'
 
-export const CardGrid = styled.section`
+export const CardStyle = styled.section`
     margin-bottom: 30px;
-    display: grid;
-    grid-template-columns: 25px auto 25px;
-    height: ${props => props.shorterCard ? '520px' : '670px'};
+    height: ${props => props.shorterCard ? '540px' : '690px'};
     position: relative;
 `
 
@@ -18,7 +16,7 @@ export const Image = styled.img`
 `
 
 export const CardBackgroundColor = styled.div`
-    height: ${props => props.shorterBackground ? '470px' : '620px'};
+    height: ${props => props.shorterBackground ? '490px' : '640px'};
     width: 100%;
     position: absolute;
     top: 50px;
@@ -27,7 +25,7 @@ export const CardBackgroundColor = styled.div`
 `
 
 export const CafeInfo = styled.div`
-    grid-column: 2 / 3;
+    padding: 0 25px;
     position: absolute;
     text-align: center;
     width: 100%;
@@ -49,8 +47,7 @@ export const CafeAddress = styled.p`
 `
 
 export const CafeRatingStyle  = styled.section`
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0 25px;
     position: absolute;
     top: 370px;
     height: 100px;
@@ -63,20 +60,16 @@ export const CafeRatingStyle  = styled.section`
 `
 
 export const RatingButton = styled.button`
-    grid-row: 1 / 2;
-    display: flex;
-    justify-content: flex-end;
-    padding: 0;
+    justify-self: end;
     color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
     font-family: Tahoma, sans-serif;
     font-size: 12px;
+    font-style: italic;
     letter-spacing: 0.64px;
 `
 
 export const AllRatings = styled.div`
     display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
 `
 
 export const RatingCategory = styled.div`
@@ -107,7 +100,6 @@ export const WorkIconStyle = styled.img`
 `
 
 export const WlanIconStyle = styled.img`
-    height: 70%;
     width: 90%;
     align-self: center;
 `
@@ -119,10 +111,9 @@ export const CupIconStyle = styled.img`
 `
 
 export const CafeOpeningHours = styled.div`
-    padding-top: 30px;
-    grid-column: 2 / 3;
+    padding: 0 25px;
     position: absolute;
-    top: 460px;
+    top: 500px;
     color: #E4E9F2;
     font-family: Tahoma, sans-serif;
     font-size: 14px;
