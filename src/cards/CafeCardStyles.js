@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+export const CardsPageStyle = styled.div`
+    padding: 30px;
+    height: 100vh;
+`
+
 export const CardStyle = styled.section`
     margin-bottom: 30px;
     height: ${props => props.shorterCard ? '540px' : '690px'};

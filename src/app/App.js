@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react'
+import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom'
 import {getCards, patchCard, postCard} from '../services'
-import GlobalStyles, {FadeIn, FadeOut} from '../misc/GlobalStyles'
-import AppGrid from './AppGrid'
-import CafeCard from '../cards/CafeCard'
+import GlobalStyles from '../misc/GlobalStyles'
+import CafeCardsPage from '../cards/CafeCardsPage'
 import Form from '../create/Form'
-import FadeinImage from '../images/fadein.png'
-import FadeoutImage from '../images/fadeout.png'
 
 export default function App() {
 
@@ -37,15 +35,13 @@ export default function App() {
 
   return (
     <>
-      <GlobalStyles />
-      
-      <Form onCreateCard={handleCreateCard} ></Form>
-      <AppGrid>
-        {cards.map(card => <CafeCard key={card._id} card={card} handleRatingChanges={handleRatingChanges}/> )}
-      </AppGrid>
-      <FadeOut src={FadeoutImage} />
+      <BrowserRouter>
+        <GlobalStyles />
+        <Switch>
+          <Route path="/create" render={() => <Form onCreateCard={handleCreateCard} ></Form>} />
+          <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
+        </Switch>
+      </BrowserRouter>
     </>
   )
 }
-
-//<FadeIn src={FadeinImage} />

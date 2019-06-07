@@ -17,7 +17,6 @@ export default function Form ({onCreateCard}) {
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
         const openingHours = [{day: `Mo`, time: `8:00 - 18:00`}]
-        console.log(img, alt, title, street, district, score, counter, openingHours)
         onCreateCard(img, alt, title, street, district, score, counter, openingHours)
     }
 
