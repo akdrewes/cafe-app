@@ -1,8 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import {getCards, patchCard} from '../services'
+import {getCards, patchCard, postCard} from '../services'
 import GlobalStyles, {FadeIn, FadeOut} from '../misc/GlobalStyles'
 import AppGrid from './AppGrid'
 import CafeCard from '../cards/CafeCard'
+import Form from '../create/Form'
 import FadeinImage from '../images/fadein.png'
 import FadeoutImage from '../images/fadeout.png'
 
@@ -29,10 +30,18 @@ export default function App() {
     .catch(err => console.log(err))
   }
 
+  const handleCreateCard = (img, alt, title, street, district, score, counter, openingHours) => {
+    console.log(img, alt, title, street, district, score, counter, openingHours)
+    postCard({img, alt, title, street, district, score, counter, openingHours})
+    .then(card => setCards([card, ...cards]))
+    .catch(err => console.log(err))
+  }
+
   return (
     <>
       <GlobalStyles />
-      <FadeIn src={FadeinImage} />
+      
+      <Form onCreateCard={handleCreateCard} ></Form>
       <AppGrid>
         {cards.map(card => <CafeCard key={card._id} card={card} handleRatingChanges={handleRatingChanges}/> )}
       </AppGrid>
@@ -40,3 +49,5 @@ export default function App() {
     </>
   )
 }
+
+//<FadeIn src={FadeinImage} />
