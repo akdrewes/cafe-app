@@ -70,8 +70,6 @@ export const RatingButton = styled.button`
 
 export const AllRatings = styled.div`
     display: grid;
-    grid-row: 2 / 3;
-    grid-column: 1 / 3;
 `
 
 export const RatingCategory = styled.div`
