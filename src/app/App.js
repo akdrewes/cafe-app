@@ -19,7 +19,7 @@ export default function App() {
     console.log(score, counter, id)
     patchCard(score, counter, id)
     .then(changedCard => {
-      const index = cards.findIndex(oldCard => oldCard._id === changedCard._id)
+      const index = cards.findIndex(currCard => currCard._id === changedCard._id)
       setCards([
         ...cards.slice(0, index),
         changedCard,
