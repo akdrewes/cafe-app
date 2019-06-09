@@ -1,8 +1,9 @@
 import React from 'react'
 import { getLocal } from "../services";
-import {CreatePageHeader, FormStyle, CreateLabel, CreateButton} from './CreatePageStyles'
+import {CreatePageHeader, FormStyle, CreateLabel, CreateButton, GoBack, BackArrowStyle} from './CreatePageStyles'
 import SetRating from './SetRating'
 import Input from './Input'
+import BackArrow from '../images/BackArrow.png'
 
 export default function Form ({onFormSubmit, ...props}) {
 
@@ -35,6 +36,7 @@ export default function Form ({onFormSubmit, ...props}) {
                 </CreateLabel>
                 <CreateButton>Add café</CreateButton>
             </FormStyle>
+            <GoBack to={`/`}><BackArrowStyle src={BackArrow}/></GoBack>
         </>
     )
 }

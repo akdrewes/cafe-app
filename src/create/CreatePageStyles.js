@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 
 export const CreatePageHeader = styled.h2`
     background: #77A6A1;
@@ -75,4 +76,23 @@ export const CreateButton = styled.button`
     color: #E4E9F2;
     position: absolute;
     bottom: -14px;
+`
+
+export const GoBack = styled(NavLink)`
+    height: 50px;
+    width: 50px;
+    background: #77A6A1;
+    box-shadow: 2px 3px 3px #53736A;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+
+export const BackArrowStyle = styled.img`
+    width: 80%;
 `
