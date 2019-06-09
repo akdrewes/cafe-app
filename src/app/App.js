@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react'
-import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom'
+import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {getCards, patchCard, postCard} from '../services'
 import GlobalStyles from '../misc/GlobalStyles'
 import CafeCardsPage from '../cards/CafeCardsPage'
-import Form from '../create/Form'
+import CreatePage from '../create/CreatePage'
 
 export default function App() {
 
@@ -27,10 +27,10 @@ export default function App() {
     .catch(err => console.log(err))
   }
 
-  const handleCreateCard = (img, alt, title, street, district, score, counter, openingHours) => {
+  const handleCreateCard = ({img, alt, title, street, district, score, counter, openingHours}) => {
     postCard({img, alt, title, street, district, score, counter, openingHours})
-    .then(card => setCards([card, ...cards]))
-    .catch(err => console.log(err))
+      .then(card => setCards([card, ...cards]))
+      .catch(err => console.log(err))
   }
 
   return (
@@ -38,7 +38,7 @@ export default function App() {
       <BrowserRouter>
         <GlobalStyles />
         <Switch>
-          <Route path="/create" render={() => <Form onCreateCard={handleCreateCard} ></Form>} />
+          <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} {...props} />} />
           <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
         </Switch>
       </BrowserRouter>

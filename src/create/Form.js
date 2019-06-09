@@ -4,7 +4,7 @@ import {FormStyle} from './CreatePageStyles'
 import SetRating from './SetRating'
 import Input from './Input'
 
-export default function Form ({onCreateCard}) {
+export default function Form ({onFormSubmit, ...props}) {
 
     function handleSubmit(event) {
         const img = `images/christin-hume-505823-unsplash.jpg`
@@ -17,7 +17,10 @@ export default function Form ({onCreateCard}) {
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
         const openingHours = [{day: `Mo`, time: `8:00 - 18:00`}]
-        onCreateCard(img, alt, title, street, district, score, counter, openingHours)
+
+        onFormSubmit({img, alt, title, street, district, score, counter, openingHours})
+
+        props.history.push('/')
     }
 
     return(
