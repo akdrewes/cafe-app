@@ -1,6 +1,6 @@
 import React from 'react'
 import { getLocal } from "../services";
-import {FormStyle} from './CreatePageStyles'
+import {CreatePageHeader, FormStyle} from './CreatePageStyles'
 import SetRating from './SetRating'
 import Input from './Input'
 
@@ -24,14 +24,17 @@ export default function Form ({onFormSubmit, ...props}) {
     }
 
     return(
-        <FormStyle onSubmit={handleSubmit}>
-            <Input text={`Name des Cafés`} name={`title`} placeholder={`Café Name`} />
-            <Input text={`Straße & Hausnr.`} name={`street`} placeholder={`Musterstraße 45`} />
-            <Input text={`PLZ & Stadt`} name={`district`} placeholder={`20457 Hamburg`} />
-            <label>Dein erstes Rating
-                <SetRating />
-            </label>
-            <button>Add café</button>
-        </FormStyle>
+        <>
+            <CreatePageHeader>Café Vorschlag</CreatePageHeader>
+            <FormStyle onSubmit={handleSubmit}>
+                <Input text={`Name des Cafés`} name={`title`} placeholder={`Café Name`} />
+                <Input text={`Straße & Hausnr.`} name={`street`} placeholder={`Musterstraße 45`} />
+                <Input text={`PLZ & Stadt`} name={`district`} placeholder={`20457 Hamburg`} />
+                <label>Dein erstes Rating
+                    <SetRating />
+                </label>
+                <button>Add café</button>
+            </FormStyle>
+        </>
     )
 }

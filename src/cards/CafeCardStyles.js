@@ -12,9 +12,9 @@ export const CardStyle = styled.section`
 `
 
 export const Image = styled.img`
-    left: 25px;
+    padding: 0 25px;
     height: 250px;
-    width: 250px;
+    width: 100%;
     object-fit: cover;
     position: absolute;
     z-index: 2;
