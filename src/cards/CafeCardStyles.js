@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {NavLink} from 'react-router-dom'
 
 export const CardsPageStyle = styled.div`
     display: grid;
@@ -17,6 +18,27 @@ export const CardsPageHeader = styled.h1`
     font-weight: 800;
     letter-spacing: 1.74px;
     color: #E4E9F2;
+    position: relative;
+`
+
+export const CreateButton = styled(NavLink)`
+    height: 50px;
+    width: 50px;
+    background: #77A6A1;
+    box-shadow: 2px 3px 3px #53736A;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 8.3px;
+    right: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 101;
+`
+
+export const CreateCrossStyle= styled.img`
+    width: 70%;
 `
 
 export const CardListStyle = styled.div`
