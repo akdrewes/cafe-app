@@ -1,8 +1,28 @@
 import styled from 'styled-components'
 
 export const CardsPageStyle = styled.div`
-    padding: 30px;
+    display: grid;
+    grid-template-rows: 52.6px auto;
     height: 100vh;
+`
+
+export const CardsPageHeader = styled.h1`
+    background: #77A6A1;
+    box-shadow: 2px 3px 3px #53736A;
+    padding: 3px 30px;
+    align-self: end;
+    margin: 16.6px 30px 3px 0;
+    font-size: 20px;
+    font-family: Monaco;
+    font-weight: 800;
+    letter-spacing: 1.74px;
+    color: #E4E9F2;
+`
+
+export const CardListStyle = styled.div`
+    padding: 20px 30px;
+    grid-row: 2;
+    overflow-y: scroll;
 `
 
 export const CardStyle = styled.section`
@@ -46,7 +66,7 @@ export const CafeTitle = styled.h2`
 `
 
 export const CafeAddress = styled.p`
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 14px;
     letter-spacing: 0.64px;
 `
@@ -67,7 +87,7 @@ export const CafeRatingStyle  = styled.section`
 export const RatingButton = styled.button`
     justify-self: end;
     color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 12px;
     font-style: italic;
     letter-spacing: 0.64px;
@@ -87,7 +107,7 @@ export const Label = styled.label`
     display: flex;
     align-items: center;
     color: #E4E9F2;
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 14px;
     letter-spacing: 0.64px;
 `
@@ -120,7 +140,7 @@ export const CafeOpeningHours = styled.div`
     position: absolute;
     top: 500px;
     color: #E4E9F2;
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 14px;
     letter-spacing: 0.64px;
 `

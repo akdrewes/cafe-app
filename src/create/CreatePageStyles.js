@@ -4,8 +4,8 @@ import {NavLink} from 'react-router-dom'
 export const CreatePageHeader = styled.h2`
     background: #77A6A1;
     box-shadow: 2px 3px 3px #53736A;
-    padding: 3px 25px;
-    margin-right: 25px;
+    padding: 3px 30px;
+    margin-right: 30px;
     font-size: 20px;
     font-family: Monaco;
     font-weight: 400;
@@ -15,7 +15,7 @@ export const CreatePageHeader = styled.h2`
 
 export const FormStyle = styled.form`
     margin-top: 50px;
-    padding: 0 25px;
+    padding: 0 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +31,7 @@ export const CreateLabel = styled.label`
     padding: 8px;
     display: flex;
     flex-direction: column;
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 12px;
     letter-spacing: 0.64px;
     color: #53736A;
@@ -54,7 +54,7 @@ export const AllRatings = styled.div`
 `
 
 export const RatingLabel = styled.label`
-    font-family: Tahoma, sans-serif;
+    font-family: Tahoma;
     font-size: 12px;
     letter-spacing: 0.64px;
     color: #53736A;
@@ -86,7 +86,7 @@ export const GoBack = styled(NavLink)`
     border: none;
     border-radius: 50%;
     position: absolute;
-    left: 25px;
+    left: 30px;
     bottom: 30px;
     display: flex;
     justify-content: center;
