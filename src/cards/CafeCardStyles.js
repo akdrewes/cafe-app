@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom'
 
 export const CardsPageStyle = styled.div`
     display: grid;
-    grid-template-rows: 52.6px auto;
+    grid-template-rows: 52.6px auto 35px;
     height: 100vh;
 `
 
@@ -18,6 +18,10 @@ export const CardsPageHeader = styled.h1`
     font-weight: 800;
     letter-spacing: 1.74px;
     color: #E4E9F2;
+`
+
+export const CardsPageFooter = styled.footer`
+    background: #77A6A1;
     position: relative;
 `
 
@@ -25,12 +29,11 @@ export const CreateButton = styled(NavLink)`
     height: 50px;
     width: 50px;
     background: #77A6A1;
-    box-shadow: 2px 3px 3px #53736A;
-    border: none;
+    border: 2px solid white;
     border-radius: 50%;
     position: absolute;
-    top: 8.3px;
-    right: 35px;
+    left: 165px;
+    top: -25px;
     display: flex;
     justify-content: center;
     align-items: center;

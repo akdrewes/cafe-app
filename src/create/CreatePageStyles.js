@@ -5,7 +5,8 @@ export const CreatePageHeader = styled.h2`
     background: #77A6A1;
     box-shadow: 2px 3px 3px #53736A;
     padding: 3px 30px;
-    margin-right: 30px;
+    align-self: end;
+    margin: 16.6px 30px 3px 0;
     font-size: 20px;
     font-family: Monaco;
     font-weight: 400;
@@ -75,22 +76,22 @@ export const CreateButton = styled.button`
     letter-spacing: 1.74px;
     color: #E4E9F2;
     position: absolute;
-    bottom: -14px;
+    bottom: 145px;
 `
 
 export const GoBack = styled(NavLink)`
     height: 50px;
     width: 50px;
     background: #77A6A1;
-    box-shadow: 2px 3px 3px #53736A;
-    border: none;
+    border: 2px solid white;
     border-radius: 50%;
     position: absolute;
-    left: 30px;
-    bottom: 30px;
+    left: 165px;
+    top: -25px;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 101;
 `
 
 export const BackArrowStyle = styled.img`

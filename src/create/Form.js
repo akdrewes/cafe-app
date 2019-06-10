@@ -1,9 +1,9 @@
 import React from 'react'
 import { getLocal } from "../services";
-import {CreatePageHeader, FormStyle, CreateLabel, CreateButton, GoBack, BackArrowStyle} from './CreatePageStyles'
+import {FormStyle, CreateLabel, CreateButton} from './CreatePageStyles'
 import SetRating from './SetRating'
 import Input from './Input'
-import BackArrow from '../images/BackArrow.png'
+
 
 export default function Form ({onFormSubmit, ...props}) {
 
@@ -25,18 +25,14 @@ export default function Form ({onFormSubmit, ...props}) {
     }
 
     return(
-        <>
-            <CreatePageHeader>Café Vorschlag</CreatePageHeader>
-            <FormStyle onSubmit={handleSubmit}>
-                <Input text={`Name des Cafés`} name={`title`} placeholder={`Café Name`} />
-                <Input text={`Straße & Hausnr.`} name={`street`} placeholder={`Musterstraße 45`} />
-                <Input text={`PLZ & Stadt`} name={`district`} placeholder={`20457 Hamburg`} />
-                <CreateLabel>Dein erstes Rating
-                    <SetRating />
-                </CreateLabel>
-                <CreateButton>Add café</CreateButton>
-            </FormStyle>
-            <GoBack to={`/`}><BackArrowStyle src={BackArrow}/></GoBack>
-        </>
+        <FormStyle onSubmit={handleSubmit}>
+            <Input text={`Name des Cafés`} name={`title`} placeholder={`Café Name`} />
+            <Input text={`Straße & Hausnr.`} name={`street`} placeholder={`Musterstraße 45`} />
+            <Input text={`PLZ & Stadt`} name={`district`} placeholder={`20457 Hamburg`} />
+            <CreateLabel>Dein erstes Rating
+                <SetRating />
+            </CreateLabel>
+            <CreateButton>Add café</CreateButton>
+        </FormStyle>
     )
 }
