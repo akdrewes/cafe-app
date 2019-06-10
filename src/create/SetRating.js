@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { setLocal } from "../services";
 import {RatingCategory, Rating, WorkIconStyle, WlanIconStyle, CupIconStyle} from '../cards/CafeCardStyles'
-import {AllRatings, RatingLabel} from './CreatePageStyles'
+import {AllRatings, RatingLabel} from './FormStyles'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WorkIconDisabled from '../images/WorkAtmosphereCreate.png'
 import WlanIcon from '../images/WLANY.png'

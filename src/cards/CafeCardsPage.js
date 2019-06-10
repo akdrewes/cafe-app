@@ -1,17 +1,15 @@
 import React from 'react'
-import {PageStyle, Footer} from '../app/AppGrid'
-import {CardsPageHeader, CreateButton, CreateCrossStyle, CardListStyle} from './CafeCardStyles.js'
+import {HomepageHeader} from '../app/HeaderStyles'
+import Footer from '../app/Footer'
 import CafeCardList from './CafeCardList'
 import CreateCross from '../images/CreateCross.png'
 
 export default function CafeCardsPage({cards, onRatingChanges}) {
     return(
-        <PageStyle>
-            <CardsPageHeader>COFFEE WORKERS</CardsPageHeader>
-            <CardListStyle>
-                <CafeCardList cards={cards} onRatingChanges={onRatingChanges} />
-            </CardListStyle>
-            <Footer><CreateButton to={`/create`}><CreateCrossStyle src={CreateCross}/></CreateButton></Footer>
-        </PageStyle>
+        <>
+            <HomepageHeader>COFFEE WORKERS</HomepageHeader>
+            <CafeCardList cards={cards} onRatingChanges={onRatingChanges} />
+            <Footer path={`/create`} icon={CreateCross} />
+        </>
     )
 }

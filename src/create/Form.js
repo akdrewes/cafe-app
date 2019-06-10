@@ -1,8 +1,8 @@
 import React from 'react'
-import { getLocal } from "../services";
-import {FormStyle, CreateLabel, CreateButton} from './CreatePageStyles'
-import SetRating from './SetRating'
+import {getLocal} from "../services";
+import {FormStyle, FormLabel, AddCardButton} from './FormStyles'
 import Input from './Input'
+import SetRating from './SetRating'
 
 
 export default function Form ({onFormSubmit, ...props}) {
@@ -29,10 +29,10 @@ export default function Form ({onFormSubmit, ...props}) {
             <Input text={`Name of the café`} name={`title`} placeholder={`Café name`} />
             <Input text={`Street & No.`} name={`street`} placeholder={`Musterstraße 45`} />
             <Input text={`Postal code & City`} name={`district`} placeholder={`20457 Hamburg`} />
-            <CreateLabel>Your first rating
+            <FormLabel>Your first rating
                 <SetRating />
-            </CreateLabel>
-            <CreateButton>Add café</CreateButton>
+            </FormLabel>
+            <AddCardButton>Add café</AddCardButton>
         </FormStyle>
     )
 }

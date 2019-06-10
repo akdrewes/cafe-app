@@ -1,43 +1,4 @@
 import styled from 'styled-components'
-import {NavLink} from 'react-router-dom'
-
-export const CardsPageHeader = styled.h1`
-    background: #77A6A1;
-    box-shadow: 2px 3px 3px #53736A;
-    padding: 3px 30px;
-    align-self: end;
-    margin: 16.6px 30px 3px 0;
-    font-size: 20px;
-    font-family: Monaco;
-    font-weight: 800;
-    letter-spacing: 1.74px;
-    color: #E4E9F2;
-`
-
-export const CreateButton = styled(NavLink)`
-    height: 50px;
-    width: 50px;
-    background: #77A6A1;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: absolute;
-    left: 165px;
-    top: -25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 101;
-`
-
-export const CreateCrossStyle= styled.img`
-    width: 70%;
-`
-
-export const CardListStyle = styled.div`
-    padding: 20px 30px;
-    grid-row: 2;
-    overflow-y: scroll;
-`
 
 export const CardStyle = styled.section`
     margin-bottom: 30px;
@@ -57,57 +18,49 @@ export const Image = styled.img`
 export const CardBackgroundColor = styled.div`
     height: ${props => props.shorterBackground ? '490px' : '640px'};
     width: 100%;
-    position: absolute;
-    top: 50px;
     background: #77A6A1;
     box-shadow: 2px 3px 3px #53736A;
+    position: absolute;
+    top: 50px;
 `
 
 export const CafeInfo = styled.div`
     padding: 0 25px;
-    position: absolute;
-    text-align: center;
     width: 100%;
-    top: 250px;
+    text-align: center;
     color: #E4E9F2;
+    position: absolute;
+    top: 250px;
 `
 
 export const CafeTitle = styled.h2`
     font-family: Monaco;
-    font-weight: 400;
     font-size: 16px;
     letter-spacing: 1.74px;
+    font-weight: 400;
 `
 
-export const CafeAddress = styled.p`
-    font-family: Tahoma;
-    font-size: 14px;
-    letter-spacing: 0.64px;
-`
+export const CafeAddress = styled.p``
 
-export const CafeRatingStyle  = styled.section`
+export const RatingSection  = styled.section`
     padding: 0 25px;
+    height: 100px;
     position: absolute;
     top: 370px;
-    height: 100px;
     display: grid;
+    grid-template-columns: 1fr;
     grid-template-rows: 20% 80%;
     grid-row-gap: 5px;
-    grid-template-columns: 1fr;
-    /*background: rgba(83,115,106,0.4);
-    outline: rgba(83,115,106,0.4) solid 6px;*/
 `
 
 export const RatingButton = styled.button`
     justify-self: end;
-    color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
-    font-family: Tahoma;
     font-size: 12px;
     font-style: italic;
-    letter-spacing: 0.64px;
+    color: ${props => props.colour ? '#53736A' : '#E4E9F2'};
 `
 
-export const AllRatings = styled.div`
+export const RatingView = styled.div`
     display: grid;
 `
 
@@ -118,12 +71,9 @@ export const RatingCategory = styled.div`
 
 export const Label = styled.label`
     grid-column: 1 / 2;
+    color: #E4E9F2;
     display: flex;
     align-items: center;
-    color: #E4E9F2;
-    font-family: Tahoma;
-    font-size: 14px;
-    letter-spacing: 0.64px;
 `
 
 export const Rating = styled.div`
@@ -151,12 +101,9 @@ export const CupIconStyle = styled.img`
 
 export const CafeOpeningHours = styled.div`
     padding: 0 25px;
+    color: #E4E9F2;
     position: absolute;
     top: 500px;
-    color: #E4E9F2;
-    font-family: Tahoma;
-    font-size: 14px;
-    letter-spacing: 0.64px;
 `
 
 export const Arrow = styled.img`

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import { getLocal } from "../services";
 import OutsideClickHandler from 'react-outside-click-handler'
-import {CafeRatingStyle, RatingButton, AllRatings} from './CafeCardStyles.js'
+import {getLocal} from "../services";
+import {RatingSection, RatingButton, RatingView} from './CafeCardStyles.js'
 import StaticRating from './StaticRating'
 import DynamicRating from './DynamicRating'
 
@@ -26,10 +26,10 @@ export default function CafeRating({score, counter, cardId, onRatingChanges}) {
 
     return (
         <OutsideClickHandler onOutsideClick={() => setIsStatic(true)} >
-            <CafeRatingStyle>
+            <RatingSection>
                 <RatingButton onClick={handleToggleRating} colour={isStatic}>{isStatic ? "Submit rating" : "POST"}</RatingButton>
-                <AllRatings >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</AllRatings>
-            </CafeRatingStyle>
+                <RatingView >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</RatingView>
+            </RatingSection>
         </OutsideClickHandler>
     )
 }

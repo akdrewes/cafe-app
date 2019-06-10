@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {getCards, patchCard, postCard} from '../services'
 import GlobalStyles from '../misc/GlobalStyles'
+import AppGrid from './AppGrid'
 import CafeCardsPage from '../cards/CafeCardsPage'
 import CreatePage from '../create/CreatePage'
 
@@ -37,10 +38,12 @@ export default function App() {
     <>
       <BrowserRouter>
         <GlobalStyles />
-        <Switch>
-          <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} {...props} />} />
-          <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
-        </Switch>
+        <AppGrid>
+          <Switch>
+            <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} {...props} />} />
+            <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
+          </Switch>
+        </AppGrid>
       </BrowserRouter>
     </>
   )

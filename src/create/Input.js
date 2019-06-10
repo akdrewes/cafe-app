@@ -1,10 +1,10 @@
 import React from 'react'
-import {CreateLabel, CreateInput} from './CreatePageStyles'
+import {FormLabel, FormInput} from './FormStyles'
 
 export default function Input({text, name, placeholder}) {
     return(
-        <CreateLabel>{text}
-            <CreateInput type="text" name={name} placeholder={placeholder}></CreateInput>
-        </CreateLabel>
+        <FormLabel>{text}
+            <FormInput type="text" name={name} placeholder={placeholder}></FormInput>
+        </FormLabel>
     )
 }

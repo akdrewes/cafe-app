@@ -1,5 +1,5 @@
 import React from 'react'
-import {CafeOpeningHours, Arrow, Table} from './CafeCardStyles.js'
+import {CafeOpeningHours, Table, Arrow} from './CafeCardStyles.js'
 import DailyOpeningHours from './DailyOpeningHours'
 import Arrowdown from '../images/arrowDown.png'
 import Arrowup from '../images/arrowUp.png'
