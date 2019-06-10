@@ -36,7 +36,7 @@ export default function SetRating() {
     return (
         <AllRatings>
             <RatingCategory>
-                <RatingLabel>Arbeitsklima</RatingLabel>
+                <RatingLabel>Work climate</RatingLabel>
                 <Rating>
                 {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
                 </Rating>
@@ -50,7 +50,7 @@ export default function SetRating() {
             </RatingCategory>
 
             <RatingCategory>
-                <RatingLabel>Kaffee</RatingLabel>
+                <RatingLabel>Coffee</RatingLabel>
                 <Rating>
                 {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
                 </Rating>

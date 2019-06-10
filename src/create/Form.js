@@ -17,7 +17,7 @@ export default function Form ({onFormSubmit, ...props}) {
         const rating = getLocal('firstRating')
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
-        const openingHours = [{day: `Mo`, time: `8:00 - 18:00`}]
+        const openingHours = [{day: `Mon`, time: `8:00 - 18:00`}]
 
         onFormSubmit({img, alt, title, street, district, score, counter, openingHours})
 
@@ -26,10 +26,10 @@ export default function Form ({onFormSubmit, ...props}) {
 
     return(
         <FormStyle onSubmit={handleSubmit}>
-            <Input text={`Name des Cafés`} name={`title`} placeholder={`Café Name`} />
-            <Input text={`Straße & Hausnr.`} name={`street`} placeholder={`Musterstraße 45`} />
-            <Input text={`PLZ & Stadt`} name={`district`} placeholder={`20457 Hamburg`} />
-            <CreateLabel>Dein erstes Rating
+            <Input text={`Name of the café`} name={`title`} placeholder={`Café name`} />
+            <Input text={`Street & No.`} name={`street`} placeholder={`Musterstraße 45`} />
+            <Input text={`Postal code & City`} name={`district`} placeholder={`20457 Hamburg`} />
+            <CreateLabel>Your first rating
                 <SetRating />
             </CreateLabel>
             <CreateButton>Add café</CreateButton>

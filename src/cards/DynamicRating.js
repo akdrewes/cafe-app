@@ -35,7 +35,7 @@ export default function DynamicRating() {
     return (
         <>
             <RatingCategory>
-                <Label>Arbeitsklima</Label>
+                <Label>Work climate</Label>
                 <Rating>
                 {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
                 </Rating>
@@ -49,7 +49,7 @@ export default function DynamicRating() {
             </RatingCategory>
 
             <RatingCategory>
-                <Label>Kaffee</Label>
+                <Label>Coffee</Label>
                 <Rating>
                 {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
                 </Rating>

@@ -1,12 +1,6 @@
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 
-export const CardsPageStyle = styled.div`
-    display: grid;
-    grid-template-rows: 52.6px auto 35px;
-    height: 100vh;
-`
-
 export const CardsPageHeader = styled.h1`
     background: #77A6A1;
     box-shadow: 2px 3px 3px #53736A;
@@ -18,11 +12,6 @@ export const CardsPageHeader = styled.h1`
     font-weight: 800;
     letter-spacing: 1.74px;
     color: #E4E9F2;
-`
-
-export const CardsPageFooter = styled.footer`
-    background: #77A6A1;
-    position: relative;
 `
 
 export const CreateButton = styled(NavLink)`
@@ -181,5 +170,5 @@ export const Table = styled.table`
 `
 
 export const Day = styled.td`
-    padding-right: 8px;
+    padding-right: 16px;
 `

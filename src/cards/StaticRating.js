@@ -12,7 +12,7 @@ export default function StaticRating({score, counter}) {
     return (
         <>
             <RatingCategory>
-                <Label>Arbeitsklima</Label>
+                <Label>Work climate</Label>
                 <Rating>{new Array(rating[0]).fill('').map((placeholder, index) => <WorkIconStyle key={index} src={WorkIcon} /> )}</Rating>
             </RatingCategory>
 
@@ -22,7 +22,7 @@ export default function StaticRating({score, counter}) {
             </RatingCategory>
             
             <RatingCategory>
-                <Label>Kaffee</Label>
+                <Label>Coffee</Label>
                 <Rating>{new Array(rating[2]).fill('').map((placeholder, index) => <CupIconStyle key={index} src={CupIcon} /> )}</Rating>
             </RatingCategory> 
         </>

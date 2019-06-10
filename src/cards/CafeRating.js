@@ -27,7 +27,7 @@ export default function CafeRating({score, counter, cardId, onRatingChanges}) {
     return (
         <OutsideClickHandler onOutsideClick={() => setIsStatic(true)} >
             <CafeRatingStyle>
-                <RatingButton onClick={handleToggleRating} colour={isStatic}>{isStatic ? "Bewertung abgeben" : "POSTEN"}</RatingButton>
+                <RatingButton onClick={handleToggleRating} colour={isStatic}>{isStatic ? "Submit rating" : "POST"}</RatingButton>
                 <AllRatings >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</AllRatings>
             </CafeRatingStyle>
         </OutsideClickHandler>

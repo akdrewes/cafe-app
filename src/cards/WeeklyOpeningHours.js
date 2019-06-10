@@ -9,7 +9,7 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
     return(
         <CafeOpeningHours>
             <div onClick={onToggleOpeningHours}>
-                <label htmlFor='openingHours'>Öffnungszeiten</label>
+                <label htmlFor='openingHours'>Opening hours</label>
                 <Arrow src={hidden ? Arrowdown : Arrowup} />
             </div>
             <Table id='openingHours' hidden={hidden}>
