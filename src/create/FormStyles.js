@@ -38,6 +38,7 @@ export const AllRatings = styled.div`
 `
 
 export const RatingLabel = styled.label`
+    height: 28px;
     font-size: 12px;
     display: flex;
     align-items: center;

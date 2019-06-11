@@ -5,7 +5,8 @@ import Input from './Input'
 import SetRating from './SetRating'
 
 
-export default function Form ({onFormSubmit, ...props}) {
+
+export default function Form ({onFormSubmit, history}) {
 
     function handleSubmit(event) {
         const img = `images/christin-hume-505823-unsplash.jpg`
@@ -21,7 +22,8 @@ export default function Form ({onFormSubmit, ...props}) {
 
         onFormSubmit({img, alt, title, street, district, score, counter, openingHours})
 
-        props.history.push('/')
+        history.push('/')
+       
     }
 
     return(
@@ -33,6 +35,7 @@ export default function Form ({onFormSubmit, ...props}) {
                 <SetRating />
             </FormLabel>
             <AddCardButton>Add café</AddCardButton>
+           
         </FormStyle>
     )
 }

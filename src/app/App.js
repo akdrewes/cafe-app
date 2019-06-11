@@ -28,10 +28,9 @@ export default function App() {
     .catch(err => console.log(err))
   }
 
-  const handleCreateCard = ({img, alt, title, street, district, score, counter, openingHours}) => {
-    postCard({img, alt, title, street, district, score, counter, openingHours})
-      .then(card => setCards([card, ...cards]))
-      .catch(err => console.log(err))
+  const handleCreateCard = async ({img, alt, title, street, district, score, counter, openingHours}) => {
+    const newCard = await postCard({img, alt, title, street, district, score, counter, openingHours})
+    setCards([...cards, newCard])
   }
 
   return (
@@ -40,7 +39,7 @@ export default function App() {
         <GlobalStyles />
         <AppGrid>
           <Switch>
-            <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} {...props} />} />
+            <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} history={props.history} />} />
             <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
           </Switch>
         </AppGrid>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { setLocal } from "../services";
-import {RatingCategory, Label, Rating, WorkIconStyle, WlanIconStyle, CupIconStyle} from './CafeCardStyles.js'
+import {RatingCategoryStyle, Label, Rating, RatingIcon} from './CafeCardStyles.js'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WorkIconDisabled from '../images/WorkAtmosphereN.png'
 import WlanIcon from '../images/WLANY.png'
@@ -34,26 +34,26 @@ export default function DynamicRating() {
 
     return (
         <>
-            <RatingCategory>
+            <RatingCategoryStyle>
                 <Label>Work climate</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WorkIconStyle key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
                 </Rating>
-            </RatingCategory>
+            </RatingCategoryStyle>
 
-            <RatingCategory>
+            <RatingCategoryStyle>
                 <Label>WLAN</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <WlanIconStyle key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
                 </Rating>
-            </RatingCategory>
+            </RatingCategoryStyle>
 
-            <RatingCategory>
+            <RatingCategoryStyle>
                 <Label>Coffee</Label>
                 <Rating>
-                {iconsArray.map((icon, index) => <CupIconStyle key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
+                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
                 </Rating>
-            </RatingCategory>
+            </RatingCategoryStyle>
         </>
     )
 }

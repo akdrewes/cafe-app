@@ -1,5 +1,5 @@
 import React from 'react'
-import {RatingCategory, Label, Rating, WorkIconStyle, WlanIconStyle, CupIconStyle} from './CafeCardStyles.js'
+import RatingCategory from './RatingCategory'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WlanIcon from '../images/WLANY.png'
 import CupIcon from '../images/CupY.png'
@@ -11,20 +11,9 @@ export default function StaticRating({score, counter}) {
     
     return (
         <>
-            <RatingCategory>
-                <Label>Work climate</Label>
-                <Rating>{new Array(rating[0]).fill('').map((placeholder, index) => <WorkIconStyle key={index} src={WorkIcon} /> )}</Rating>
-            </RatingCategory>
-
-            <RatingCategory>
-                <Label>WLAN</Label>
-                <Rating>{new Array(rating[1]).fill('').map((placeholder, index) => <WlanIconStyle key={index} src={WlanIcon} /> )}</Rating>
-            </RatingCategory>
-            
-            <RatingCategory>
-                <Label>Coffee</Label>
-                <Rating>{new Array(rating[2]).fill('').map((placeholder, index) => <CupIconStyle key={index} src={CupIcon} /> )}</Rating>
-            </RatingCategory> 
+            <RatingCategory label={`Work climate`} length={rating[0]} icon={WorkIcon} />
+            <RatingCategory label={`WLAN`} length={rating[1]} icon={WlanIcon} />
+            <RatingCategory label={`Coffee`} length={rating[2]} icon={CupIcon} />
         </>
     )
 }

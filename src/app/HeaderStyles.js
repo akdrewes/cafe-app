@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
 export const Header = styled.h1`
-    margin: 0 30px 3px 0;
-    padding: 3px 30px;
-    align-self: end;
+    margin-bottom: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: #77A6A1;
     box-shadow: 2px 3px 3px #53736A;
     font-family: Monaco;
@@ -14,5 +15,6 @@ export const Header = styled.h1`
 `
 
 export const HomepageHeader = styled(Header)`
+    font-size: 22px;
     font-weight: 800;
 `

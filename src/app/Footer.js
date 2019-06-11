@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 
 const FooterStyle = styled.footer`
-    background: white;
+    background: #F2F5F5;
     border-top: 1px solid #53736A;
     position: relative;
 `
