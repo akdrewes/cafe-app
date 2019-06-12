@@ -19,7 +19,9 @@ export const CardBackgroundColor = styled.div`
     height: ${props => props.shorterBackground ? '490px' : '640px'};
     width: 100%;
     background: #77A6A1;
-    box-shadow: 2px 3px 3px #53736A;
+    /*box-shadow: 2px 3px 3px #53736A;*/
+    box-shadow: 0 0 10px 0 #DCE0DF;
+    border-radius: 5px;
     position: absolute;
     top: 50px;
 `
@@ -46,7 +48,7 @@ export const RatingSection  = styled.section`
     padding: 0 25px;
     height: 100px;
     position: absolute;
-    top: 360px;
+    top: 370px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 20%;
