@@ -50,12 +50,13 @@ export const AddCardButton = styled.button`
     background: #77A6A1;
     border: none;
     border-radius: 30px;
-    box-shadow: 2px 3px 3px #53736A;
+    /*box-shadow: 2px 3px 3px #53736A;*/
+    box-shadow: 0 0 10px 0 #B3B9B8;
     font-family: Monaco;
     font-size: 18px;
     letter-spacing: 1.74px;
     font-weight: 400;
-    color: #E4E9F2;
+    color: #F2F5F5;
     position: absolute;
-    bottom: 145px;
+    bottom: 163px;
 `

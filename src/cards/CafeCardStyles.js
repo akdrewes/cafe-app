@@ -19,8 +19,7 @@ export const CardBackgroundColor = styled.div`
     height: ${props => props.shorterBackground ? '490px' : '640px'};
     width: 100%;
     background: #77A6A1;
-    /*box-shadow: 2px 3px 3px #53736A;*/
-    box-shadow: 0 0 10px 0 #DCE0DF;
+    box-shadow: 0 0 10px 0 #B3B9B8;
     border-radius: 5px;
     position: absolute;
     top: 50px;
@@ -30,7 +29,7 @@ export const CafeInfo = styled.div`
     padding: 0 25px;
     width: 100%;
     text-align: center;
-    color: #E4E9F2;
+    color: #F2F5F5;
     position: absolute;
     top: 250px;
 `
@@ -52,18 +51,17 @@ export const RatingSection  = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 20%;
-    grid-row-gap: 5px;
+    grid-row-gap: 15px;
 `
 
 export const RatingButton = styled.button`
     margin: 0;
     padding: ${props => props.btnStyle ? '0' : ''};
     justify-self: end;
-    background: ${props => props.btnStyle ? '' : '#E4E9F2'};
+    background: ${props => props.btnStyle ? '' : '#F2F5F5'};
     border: ${props => props.btnStyle ? '' : 'none'};
     border-radius: ${props => props.btnStyle ? '' : '5px'};
     box-shadow: ${props => props.btnStyle ? '' : '2px 3px 3px #53736A'};
-    font-family: ${props => props.btnStyle ? '' : 'Monaco'};
     font-size: 12px;
     font-style: italic;
     color: #53736A;
@@ -81,7 +79,7 @@ export const RatingCategoryStyle = styled.div`
 export const Label = styled.label`
     height: 28px;
     grid-column: 1 / 2;
-    color: #E4E9F2;
+    color: #F2F5F5;
     display: flex;
     align-items: center;
 `
@@ -99,7 +97,7 @@ export const RatingIcon = styled.img`
 
 export const CafeOpeningHours = styled.div`
     padding: 0 25px;
-    color: #E4E9F2;
+    color: #F2F5F5;
     position: absolute;
     top: 500px;
 `

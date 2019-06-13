@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import {getCards, patchCard, postCard} from '../services'
 import GlobalStyles from '../misc/GlobalStyles'
+import {Header, Logo} from '../app/HeaderStyles'
 import AppGrid from './AppGrid'
 import CafeCardsPage from '../cards/CafeCardsPage'
 import CreatePage from '../create/CreatePage'
@@ -38,6 +39,7 @@ export default function App() {
       <BrowserRouter>
         <GlobalStyles />
         <AppGrid>
+          <Header><Logo>coffeeWorkers</Logo></Header>
           <Switch>
             <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} history={props.history} />} />
             <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />

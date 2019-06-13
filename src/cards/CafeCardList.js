@@ -4,7 +4,7 @@ import CafeCard from './CafeCard'
 
 export const CardListStyle = styled.main`
     grid-row: 2;
-    padding: 20px 30px;
+    padding: 30px 30px;
     overflow-y: scroll;
 `
 
