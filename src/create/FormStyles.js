@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const FormStyle = styled.form`
-    margin-top: 50px;
+    margin-top: 40px;
     padding: 0 30px;
     display: flex;
     flex-direction: column;
@@ -31,8 +31,12 @@ export const FormInput = styled.input`
     }
 `
 
+export const ImageDiv = styled.div`
+    margin: 5px 0 25px;
+`
+
 export const AllRatings = styled.div`
-    margin: 15px 0 25px;
+    margin: 10px 0;
     height: 90px;
     display: grid;
 `
@@ -44,13 +48,17 @@ export const RatingLabel = styled.label`
     align-items: center;
 `
 
+export const UserImage = styled.img`
+    height: 50px;
+    width: 50px;
+`
+
 export const AddCardButton = styled.button`
     padding: 5px 0;
     width: 40%;
     background: #77A6A1;
     border: none;
     border-radius: 30px;
-    /*box-shadow: 2px 3px 3px #53736A;*/
     box-shadow: 0 0 10px 0 #B3B9B8;
     font-family: Monaco;
     font-size: 18px;
@@ -58,5 +66,5 @@ export const AddCardButton = styled.button`
     font-weight: 400;
     color: #F2F5F5;
     position: absolute;
-    bottom: 163px;
+    bottom: 119px;
 `
