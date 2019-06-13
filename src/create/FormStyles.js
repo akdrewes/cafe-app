@@ -32,7 +32,12 @@ export const FormInput = styled.input`
 `
 
 export const ImageDiv = styled.div`
-    margin: 5px 0 25px;
+    margin-bottom: 20px;
+`
+
+export const FileInput = styled.input`
+    padding: 10px;
+    font-size: 12px;
 `
 
 export const AllRatings = styled.div`
@@ -48,23 +53,21 @@ export const RatingLabel = styled.label`
     align-items: center;
 `
 
-export const UserImage = styled.img`
+export const UploadedImage = styled.img`
     height: 50px;
-    width: 50px;
 `
 
 export const AddCardButton = styled.button`
     padding: 5px 0;
     width: 40%;
     background: #77A6A1;
-    border: none;
+    border: 2px solid white;
     border-radius: 30px;
-    box-shadow: 0 0 10px 0 #B3B9B8;
     font-family: Monaco;
     font-size: 18px;
     letter-spacing: 1.74px;
     font-weight: 400;
     color: #F2F5F5;
     position: absolute;
-    bottom: 119px;
+    bottom: ${props => props.position ? '43px' : '103px'};
 `

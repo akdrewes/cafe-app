@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
 import {getLocal} from "../services";
-import {FormStyle, ImageDiv, FormLabel, UserImage, AddCardButton} from './FormStyles'
+import {FormStyle, ImageDiv, FormLabel, FileInput, UploadedImage, AddCardButton} from './FormStyles'
 import Input from './Input'
 import SetRating from './SetRating'
 
@@ -59,15 +59,13 @@ export default function Form ({onFormSubmit, history}) {
             <FormLabel>Your first rating
                 <SetRating />
             </FormLabel>
-            <FormLabel>
-                <ImageDiv>{image ? (
-                    <UserImage src={image} />
-                ) : (
-                    <input type="file" name="file" onChange={upload} />
-                )}
-                </ImageDiv>
+            <FormLabel>Image of the café
+              <FileInput type="file" name="file" onChange={upload} />
+              <ImageDiv>
+                {image ? <UploadedImage src={image} alt="uploaded image" /> : ''}
+              </ImageDiv>
             </FormLabel>
-            <AddCardButton>Add café</AddCardButton>
+            <AddCardButton position={image}>Add café</AddCardButton>
         </FormStyle>
     )
 }
