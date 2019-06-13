@@ -1,19 +1,14 @@
-import styled, {createGlobalStyle} from 'styled-components'
+import {createGlobalStyle} from 'styled-components'
 
 export default createGlobalStyle`
     * {
         box-sizing: border-box;
     }
-`
-
-export const FadeOut = styled.img`
-z-index: 99;
-position:fixed;
-bottom: 0%;
-`
-
-export const FadeIn = styled.img`
-z-index: 99;
-position:fixed;
-top: 0%;
+    body {
+        margin: 0;
+        font-family: Tahoma, sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.64px;
+        color: #53736A;
+    }
 `

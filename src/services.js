@@ -11,7 +11,7 @@ export function postCard({img, alt, title, street, district, score, counter, ope
         },
         body: JSON.stringify({img: img, alt: alt, title: title, street: street, district: district, score: score, counter: counter, openingHours: openingHours})
     })
-    .then(res => res.json)
+    .then(res => res.json())
 }
 
 export function patchCard(score, counter, _id) {
