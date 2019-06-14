@@ -11,9 +11,9 @@ export default function StaticRating({score, counter}) {
     
     return (
         <>
-            <RatingCategorySt label={`Work climate`} length={rating[0]} icon={WorkIcon} />
-            <RatingCategorySt label={`WLAN`} length={rating[1]} icon={WlanIcon} />
-            <RatingCategorySt label={`Coffee`} length={rating[2]} icon={CupIcon} />
+            <RatingCategorySt colour={`#F2F5F5`} label={`Work climate`} length={rating[0]} icon={WorkIcon} />
+            <RatingCategorySt colour={`#F2F5F5`} label={`WLAN`} length={rating[1]} icon={WlanIcon} />
+            <RatingCategorySt colour={`#F2F5F5`} label={`Coffee`} length={rating[2]} icon={CupIcon} />
         </>
     )
 }
