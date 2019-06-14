@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import axios from 'axios'
 import {getLocal} from "../services";
 import {FormStyle, ImageDiv, FormLabel, FileInput, UploadedImage, AddCardButton} from './FormStyles'
-import Input from './Input'
+import LabelInput from './LabelInput'
 import SetRating from './SetRating'
 
 const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
@@ -53,9 +53,9 @@ export default function Form ({onFormSubmit, history}) {
 
     return(
         <FormStyle onSubmit={handleSubmit}>
-            <Input text={`Name of the café`} name={`title`} placeholder={`Café name`} />
-            <Input text={`Street & No.`} name={`street`} placeholder={`Musterstraße 45`} />
-            <Input text={`Postal code & City`} name={`district`} placeholder={`20457 Hamburg`} />
+            <LabelInput text={`Name of the café`} name={`title`} placeholder={`Café name`} />
+            <LabelInput text={`Street & No.`} name={`street`} placeholder={`Musterstraße 45`} />
+            <LabelInput text={`Postal code & City`} name={`district`} placeholder={`20457 Hamburg`} />
             <FormLabel>Your first rating
                 <SetRating />
             </FormLabel>

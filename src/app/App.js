@@ -42,7 +42,7 @@ export default function App() {
           <Header><Logo>coffeeWorkers</Logo></Header>
           <Switch>
             <Route path="/create" render={props => <CreatePage createCard={handleCreateCard} history={props.history} />} />
-            <Route exact path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
+            <Route path="/" render={() => <CafeCardsPage cards={cards} onRatingChanges={handleRatingChanges}/>} />
           </Switch>
         </AppGrid>
       </BrowserRouter>

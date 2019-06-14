@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Label} from '../cards/CafeCardStyles'
 
 export const FormStyle = styled.form`
     margin-top: 40px;
@@ -44,13 +45,6 @@ export const AllRatings = styled.div`
     margin: 10px 0;
     height: 90px;
     display: grid;
-`
-
-export const RatingLabel = styled.label`
-    height: 28px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
 `
 
 export const UploadedImage = styled.img`
