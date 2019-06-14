@@ -6,10 +6,14 @@ import Arrowup from '../images/arrowUp.png'
 
 export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openingHours}) {
 
+    const weekday = new Date().getDay()
+
     return(
         <CafeOpeningHours>
             <div onClick={onToggleOpeningHours}>
-                <label htmlFor='openingHours'>Opening hours</label>
+                <label htmlFor='openingHours'>
+                    Open {openingHours[weekday].time}
+                </label>
                 <Arrow src={hidden ? Arrowdown : Arrowup} />
             </div>
             <Table id='openingHours' hidden={hidden}>

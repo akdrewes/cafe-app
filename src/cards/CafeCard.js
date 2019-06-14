@@ -4,8 +4,6 @@ import CafeRating from './CafeRating'
 import WeeklyOpeningHours from './WeeklyOpeningHours'
 
 export default function CafeCard({card, onRatingChanges}) {
-
-    console.log(card.openingHours)
     
     const [isHidden, setOpeningHours] = useState(true)
 
@@ -22,7 +20,9 @@ export default function CafeCard({card, onRatingChanges}) {
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
             <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={onRatingChanges} />
-            {card.openingHours.length !== 0 ? <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} /> : ''}
+            <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} />
         </CardStyle>
     )
 }
+
+/*{card.openingHours.length !== 0 ? <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} /> : ''}*/

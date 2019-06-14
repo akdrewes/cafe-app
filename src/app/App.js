@@ -29,8 +29,8 @@ export default function App() {
     .catch(err => console.log(err))
   }
 
-  const handleCreateCard = async ({img, alt, title, street, district, score, counter}) => {
-    const newCard = await postCard({img, alt, title, street, district, score, counter})
+  const handleCreateCard = async ({img, alt, title, street, district, score, counter, openingHours}) => {
+    const newCard = await postCard({img, alt, title, street, district, score, counter, openingHours})
     setCards([...cards, newCard])
   }
 
