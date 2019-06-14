@@ -6,7 +6,7 @@ export default function DailyOpeningHours({day, time}) {
     return (
         <tr>
             <Day>{day}</Day>
-            <td>{time}</td>
+            <td>{time.open} - {time.close}</td>
         </tr>
     )
 }
