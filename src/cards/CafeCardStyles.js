@@ -78,14 +78,13 @@ export const RatingCategoryStyle = styled.div`
 
 export const Label = styled.label`
     height: 28px;
-    grid-column: 1 / 2;
-    color: #F2F5F5;
     display: flex;
     align-items: center;
+    color: ${props => props.color};
+    font-size: ${props => props.fontSize};
 `
 
 export const Rating = styled.div`
-    grid-column: 2 / 3;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
 `

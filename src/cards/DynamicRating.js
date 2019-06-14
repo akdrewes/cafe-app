@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { setLocal } from "../services";
-import RatingCategoryDyn from './RatingCategoryDyn'
+import DynamicRatingCategory from './DynamicRatingCategory'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WorkIconDisabled from '../images/WorkAtmosphereN.png'
 import WlanIcon from '../images/WLANY.png'
@@ -32,11 +32,11 @@ export default function DynamicRating() {
 
     return (
         <>
-            <RatingCategoryDyn label={`Work climate`} activeIndex={activeWorkIndex} activeIcon={WorkIcon} disabledIcon={WorkIconDisabled} onToggleIcon={handleToggleWorkIcon} />
+            <DynamicRatingCategory colour={`#F2F5F5`} label={`Work climate`} activeIndex={activeWorkIndex} activeIcon={WorkIcon} disabledIcon={WorkIconDisabled} onToggleIcon={handleToggleWorkIcon} />
 
-            <RatingCategoryDyn label={`WLAN`} activeIndex={activeWlanIndex} activeIcon={WlanIcon} disabledIcon={WlanIconDisabled} onToggleIcon={handleToggleWlanIcon} />
+            <DynamicRatingCategory colour={`#F2F5F5`} label={`WLAN`} activeIndex={activeWlanIndex} activeIcon={WlanIcon} disabledIcon={WlanIconDisabled} onToggleIcon={handleToggleWlanIcon} />
 
-            <RatingCategoryDyn label={`Coffee`} activeIndex={activeCoffeeIndex} activeIcon={CupIcon} disabledIcon={CupIconDisabled} onToggleIcon={handleToggleCoffeeIcon} />
+            <DynamicRatingCategory colour={`#F2F5F5`} label={`Coffee`} activeIndex={activeCoffeeIndex} activeIcon={CupIcon} disabledIcon={CupIconDisabled} onToggleIcon={handleToggleCoffeeIcon} />
         </>
     )
 }

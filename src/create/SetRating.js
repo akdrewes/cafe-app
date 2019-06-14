@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { setLocal } from "../services";
-import {RatingCategoryStyle, Rating, RatingIcon} from '../cards/CafeCardStyles'
-import {AllRatings, RatingLabel} from './FormStyles'
+import DynamicRatingCategory from '../cards/DynamicRatingCategory'
+import {AllRatings} from './FormStyles'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WorkIconDisabled from '../images/WorkAtmosphereCreate.png'
 import WlanIcon from '../images/WLANY.png'
@@ -19,8 +19,6 @@ export default function SetRating() {
         setLocal('firstRating', [activeWorkIndex + 1, activeWlanIndex + 1, activeCoffeeIndex + 1])
     }, [activeWorkIndex, activeWlanIndex, activeCoffeeIndex])
 
-    const iconsArray = new Array(5).fill('')
-
     const handleToggleWorkIcon = (index) => {
         setActiveWorkIndex(index)
     }
@@ -36,26 +34,12 @@ export default function SetRating() {
     return (
         <AllRatings>
 
-            <RatingCategoryStyle>
-                <RatingLabel>Work climate</RatingLabel>
-                <Rating>
-                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleWorkIcon(index)} src={index <= activeWorkIndex ? WorkIcon : WorkIconDisabled} /> )}
-                </Rating>
-            </RatingCategoryStyle>
+            <DynamicRatingCategory fontSize={`12px`} label={`Work climate`} activeIndex={activeWorkIndex} activeIcon={WorkIcon} disabledIcon={WorkIconDisabled} onToggleIcon={handleToggleWorkIcon} />
 
-            <RatingCategoryStyle>
-                <RatingLabel>WLAN</RatingLabel>
-                <Rating>
-                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleWlanIcon(index)} src={index <= activeWlanIndex ? WlanIcon : WlanIconDisabled} /> )}
-                </Rating>
-            </RatingCategoryStyle>
+            <DynamicRatingCategory fontSize={`12px`} label={`WLAN`} activeIndex={activeWlanIndex} activeIcon={WlanIcon} disabledIcon={WlanIconDisabled} onToggleIcon={handleToggleWlanIcon} />
 
-            <RatingCategoryStyle>
-                <RatingLabel>Coffee</RatingLabel>
-                <Rating>
-                {iconsArray.map((icon, index) => <RatingIcon key={index} onClick={() => handleToggleCoffeeIcon(index)} src={index <= activeCoffeeIndex ? CupIcon : CupIconDisabled} /> )}
-                </Rating>
-            </RatingCategoryStyle>
+            <DynamicRatingCategory fontSize={`12px`} label={`Coffee`} activeIndex={activeCoffeeIndex} activeIcon={CupIcon} disabledIcon={CupIconDisabled} onToggleIcon={handleToggleCoffeeIcon} />
+
         </AllRatings>
     )
 }

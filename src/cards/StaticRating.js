@@ -1,5 +1,5 @@
 import React from 'react'
-import RatingCategorySt from './RatingCategorySt'
+import StaticRatingCategory from './StaticRatingCategory'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WlanIcon from '../images/WLANY.png'
 import CupIcon from '../images/CupY.png'
@@ -11,9 +11,9 @@ export default function StaticRating({score, counter}) {
     
     return (
         <>
-            <RatingCategorySt label={`Work climate`} length={rating[0]} icon={WorkIcon} />
-            <RatingCategorySt label={`WLAN`} length={rating[1]} icon={WlanIcon} />
-            <RatingCategorySt label={`Coffee`} length={rating[2]} icon={CupIcon} />
+            <StaticRatingCategory colour={`#F2F5F5`} label={`Work climate`} length={rating[0]} icon={WorkIcon} />
+            <StaticRatingCategory colour={`#F2F5F5`} label={`WLAN`} length={rating[1]} icon={WlanIcon} />
+            <StaticRatingCategory colour={`#F2F5F5`} label={`Coffee`} length={rating[2]} icon={CupIcon} />
         </>
     )
 }
