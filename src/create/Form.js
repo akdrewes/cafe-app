@@ -18,7 +18,7 @@ export default function Form ({onFormSubmit, history}) {
       const formData = new FormData()
       formData.append('file', event.target.files[0])
       formData.append('upload_preset', PRESET)
-  
+
       axios
         .post(url, formData, {
           headers: {
@@ -41,11 +41,10 @@ export default function Form ({onFormSubmit, history}) {
         const rating = getLocal('firstRating')
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
-        const openingHours = [{day: `Mon`, time: `8:00 - 18:00`}]
         const img = image
         const alt = `Café Image of ${title}`
 
-        onFormSubmit({img, alt, title, street, district, score, counter, openingHours})
+        onFormSubmit({img, alt, title, street, district, score, counter})
 
         history.push('/')
        

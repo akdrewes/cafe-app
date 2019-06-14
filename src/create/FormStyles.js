@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import {Label} from '../cards/CafeCardStyles'
 
 export const FormStyle = styled.form`
     margin-top: 40px;
@@ -33,7 +32,7 @@ export const FormInput = styled.input`
 `
 
 export const ImageDiv = styled.div`
-    margin-bottom: 20px;
+    margin: 10px 0 20px;
 `
 
 export const FileInput = styled.input`
@@ -63,5 +62,5 @@ export const AddCardButton = styled.button`
     font-weight: 400;
     color: #F2F5F5;
     position: absolute;
-    bottom: ${props => props.position ? '43px' : '103px'};
+    bottom: ${props => props.position ? '32px' : '84px'};
 `

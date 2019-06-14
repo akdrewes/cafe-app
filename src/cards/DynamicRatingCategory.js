@@ -1,7 +1,7 @@
 import React from 'react'
 import {RatingCategoryStyle, Label, Rating,  RatingIcon} from './CafeCardStyles.js'
 
-export default function RatingCategoryDy({colour, fontSize, label, onToggleIcon, activeIndex, activeIcon, disabledIcon}) {
+export default function DynamicRatingCategory({colour, fontSize, label, onToggleIcon, activeIndex, activeIcon, disabledIcon}) {
     return(
         <RatingCategoryStyle>
             <Label color={colour} fontSize={fontSize}>{label}</Label>
