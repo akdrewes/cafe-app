@@ -28,11 +28,12 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
                 {hidden ? 
                 (<label htmlFor='openingHours' >
                     {(openingTimeHM <= currTime, currTime <= closingTimeHM) ? 
-                        `Open ${openingTime} - ${closingTime}` 
+                    `Open ${openingTime} - ${closingTime}` 
                         : 
-                        `Closed`}
+                        `Opening Hours: Closed`}
                 </label>) :
-                <label htmlFor='openingHours' >Opening Hours</label>}
+                <label htmlFor='openingHours' >Opening Hours</label>
+                }
                 <Arrow src={hidden ? Arrowdown : Arrowup} />
             </div>
             <Table id='openingHours' hidden={hidden}>
