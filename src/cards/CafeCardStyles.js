@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const CardStyle = styled.section`
     margin-bottom: 30px;
-    height: ${props => props.shorterCard ? '540px' : '690px'};
+    height: ${props => props.shorterCard ? '545px' : '695px'};
     position: relative;
 `
 
@@ -16,7 +16,7 @@ export const Image = styled.img`
 `
 
 export const CardBackgroundColor = styled.div`
-    height: ${props => props.shorterBackground ? '490px' : '640px'};
+    height: ${props => props.shorterBackground ? '495px' : '645px'};
     width: 100%;
     background: #77A6A1;
     box-shadow: 0 0 10px 0 #B3B9B8;
@@ -51,7 +51,7 @@ export const RatingSection  = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 80% 20%;
-    grid-row-gap: 15px;
+    grid-row-gap: 10px;
 `
 
 export const RatingButton = styled.button`
@@ -98,7 +98,7 @@ export const CafeOpeningHours = styled.div`
     padding: 0 25px;
     color: #F2F5F5;
     position: absolute;
-    top: 500px;
+    top: 505px;
 `
 
 export const Arrow = styled.img`

@@ -31,7 +31,7 @@ export default function CafeRating({score, counter, cardId, onRatingChanges}) {
         <OutsideClickHandler onOutsideClick={() => setIsStatic(true)} >
             <RatingSection>
                 <RatingView >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</RatingView>
-                <RatingButton onClick={handleToggleRating} btnStyle={isStatic}>{isStatic ? "Add rating" : "Submit"}</RatingButton>
+                <RatingButton onClick={handleToggleRating} btnStyle={isStatic}>{isStatic ? `Add rating ★ ${counter} ${counter===1 ? `review`: `reviews`}` : "Submit"}</RatingButton>
             </RatingSection>
         </OutsideClickHandler>
     )
