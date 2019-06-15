@@ -9,9 +9,18 @@ export const CardListStyle = styled.main`
 `
 
 export default function CafeCardList({cards, onRatingChanges}) {
+
+    function handleSorting(card) {
+        const averageRating = (card.score.workAtmosphere + card.score.wlan + card.score.coffee)/(card.counter*3).toFixed(2)
+        return averageRating
+    }
+    
     return(
         <CardListStyle>
-            {cards.map(card => <CafeCard key={card._id} card={card} onRatingChanges={onRatingChanges}/> )}
+            {cards.slice()
+                .sort((a,b) => handleSorting(b) - handleSorting(a))
+                .map(card => <CafeCard key={card._id} card={card} onRatingChanges={onRatingChanges}/>)
+            }
         </CardListStyle>
     )
 }
