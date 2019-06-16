@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 
@@ -35,4 +36,9 @@ export default function Footer({path, icon}) {
             </NavButton>
         </FooterStyle>
     )
+}
+
+Footer.propTypes = {
+    path: PropTypes.string.isRequired,
+    icon: PropTypes.elementType
 }

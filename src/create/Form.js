@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 import {getLocal} from "../services";
 import {FormStyle, ImageDiv, FormLabel, FileInput, UploadedImage, AddCardButton} from './FormStyles'
 import LabelInput from './LabelInput'
@@ -68,4 +69,9 @@ export default function Form ({onFormSubmit, history}) {
             <AddCardButton position={image}>Add café</AddCardButton>
         </FormStyle>
     )
+}
+
+Form.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 }

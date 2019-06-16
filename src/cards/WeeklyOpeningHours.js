@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import {CafeOpeningHours, Table, Arrow} from './CafeCardStyles.js'
 import DailyOpeningHours from './DailyOpeningHours'
 import Arrowdown from '../images/arrowDown.png'
@@ -43,4 +44,13 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
             </Table>
         </CafeOpeningHours>
     )
+}
+
+WeeklyOpeningHours.propTypes = {
+    onToggleOpeningHours: PropTypes.func.isRequired,
+    hidden: PropTypes.bool.isRequired,
+    openingHours: PropTypes.arrayOf(PropTypes.shape({
+        day: PropTypes.string,
+        time: PropTypes.objectOf(PropTypes.string)
+    }))
 }

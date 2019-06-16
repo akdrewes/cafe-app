@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import CafeCard from './CafeCard'
 
@@ -23,4 +24,13 @@ export default function CafeCardList({cards, onRatingChanges}) {
             }
         </CardListStyle>
     )
+}
+
+CafeCardList.propTypes = {
+    cards: PropTypes.array.isRequired,
+    card: PropTypes.shape({
+        score: PropTypes.objectOf(PropTypes.number).isRequired,
+        counter: PropTypes.number.isRequired
+    }),
+    onRatingChanges: PropTypes.func.isRequired
 }
