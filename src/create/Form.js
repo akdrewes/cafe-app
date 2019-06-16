@@ -42,7 +42,7 @@ export default function Form ({onFormSubmit, history}) {
         const rating = getLocal('firstRating')
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
-        const openingHours = [{day: `Mon`, time: `needs to be defined`}, {day: `Tue`, time: `needs to be defined`}, {day: `Wed`, time: `needs to be defined`}, {day: `Thu`, time: `needs to be defined`}, {day: `Fri`, time: `needs to be defined`}, {day: `Sat`, time: `needs to be defined`}, {day: `Sun`, time: `needs to be defined`}]
+        const openingHours = [{day: `tbd`, time: {open: `tbd`, close: `tbd`}}]
         const img = image
         const alt = `Café Image of ${title}`
 

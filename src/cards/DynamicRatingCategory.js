@@ -16,7 +16,7 @@ DynamicRatingCategory.propTypes = {
     fontSize: PropTypes.string,
     label: PropTypes.string,
     onToggleIcon: PropTypes.func.isRequired,
-    activeIndex: PropTypes.number.isRequired,
+    activeIndex: PropTypes.number,
     activeIcon: PropTypes.elementType.isRequired,
     disabledIcon: PropTypes.elementType.isRequired
 }

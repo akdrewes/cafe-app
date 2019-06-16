@@ -8,8 +8,12 @@ export default function CafeCard({card, onRatingChanges}) {
     
     const [isHidden, setOpeningHours] = useState(true)
 
+    const openingHoursDefined = card.openingHours.length !==1
+
     function handleToggleOpeningHours() {
-        setOpeningHours(!isHidden)
+        if (openingHoursDefined) {
+            setOpeningHours(!isHidden)
+        } 
     }
 
     return (
@@ -20,7 +24,7 @@ export default function CafeCard({card, onRatingChanges}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={onRatingChanges} />
+            <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={onRatingChanges} /> 
             <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} />
         </CardStyle>
     )
@@ -36,7 +40,7 @@ CafeCard.propTypes = {
         score: PropTypes.objectOf(PropTypes.number).isRequired,
         counter: PropTypes.number.isRequired,
         openingHours: PropTypes.array,
-        }).isRequired,
+        }),
     onRatingChanges: PropTypes.func.isRequired
 }
 

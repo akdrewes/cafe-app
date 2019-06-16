@@ -23,19 +23,28 @@ export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openin
     const openingTimeHM = parseInt(''.concat(openingTimeHours, openingTimeMin))
     const closingTimeHM = parseInt(''.concat(closingTimeHours, closingTimeMin))
 
+    const openingHoursDefined = openingHours.length !==1
+
+    function handleLabel() {
+        let label
+        if (openingTimeHM <= currTime && currTime <= closingTimeHM) {
+            label = <label>Open {openingTime} - {closingTime}</label>
+        } else if (!openingHoursDefined) {
+            label = <label>Opening Hours: tbd</label>
+        } else {
+            label = <label>Opening Hours: Closed</label>
+        }
+        return label
+    }
+
     return(
         <CafeOpeningHours>
             <div onClick={onToggleOpeningHours}>
-                {hidden ? 
-                (<label htmlFor='openingHours' >
-                    {(openingTimeHM <= currTime, currTime <= closingTimeHM) ? 
-                    `Open ${openingTime} - ${closingTime}` 
-                        : 
-                        `Opening Hours: Closed`}
-                </label>) :
+                {hidden ? handleLabel()
+                 :
                 <label htmlFor='openingHours' >Opening Hours</label>
                 }
-                <Arrow src={hidden ? Arrowdown : Arrowup} />
+                {openingHoursDefined ? <Arrow src={hidden ? Arrowdown : Arrowup} /> : ''}
             </div>
             <Table id='openingHours' hidden={hidden}>
                 <tbody>
@@ -54,3 +63,10 @@ WeeklyOpeningHours.propTypes = {
         time: PropTypes.objectOf(PropTypes.string)
     }))
 }
+
+/*<label htmlFor='openingHours' >
+                    {(openingTimeHM <= currTime, currTime <= closingTimeHM) ? 
+                    `Open ${openingTime} - ${closingTime}` 
+                        : 
+                        `Opening Hours: Closed`}
+                </label> */
