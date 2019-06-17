@@ -11,9 +11,9 @@ import CupIconDisabled from '../images/CupCreateN.png'
 
 export default function SetRating() {
 
-    const [activeWorkIndex, setActiveWorkIndex] = useState(-1)
-    const [activeWlanIndex, setActiveWlanIndex] = useState(-1)
-    const [activeCoffeeIndex, setActiveCoffeeIndex] = useState(-1)
+    const [activeWorkIndex, setActiveWorkIndex] = useState()
+    const [activeWlanIndex, setActiveWlanIndex] = useState()
+    const [activeCoffeeIndex, setActiveCoffeeIndex] = useState()
     
     useEffect(() => {
         setLocal('firstRating', [activeWorkIndex + 1, activeWlanIndex + 1, activeCoffeeIndex + 1])

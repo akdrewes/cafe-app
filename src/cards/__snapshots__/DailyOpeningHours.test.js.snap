@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DailyOpeningHours renders the weekdays with given opening hours 1`] = `
+<tr>
+  <td
+    className="CafeCardStyles__Day-sc-8yzm7y-16 icdUwG"
+  >
+    Mon
+  </td>
+  <td>
+    10:00
+     - 
+    18:00
+  </td>
+</tr>
+`;
