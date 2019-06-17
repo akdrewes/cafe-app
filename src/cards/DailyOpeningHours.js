@@ -14,5 +14,5 @@ export default function DailyOpeningHours({day, time}) {
 
 DailyOpeningHours.propTypes = {
     day: PropTypes.string,
-    
+    time: PropTypes.objectOf(PropTypes.string)
 }

@@ -41,7 +41,5 @@ CafeCard.propTypes = {
         counter: PropTypes.number.isRequired,
         openingHours: PropTypes.array,
         }),
-    onRatingChanges: PropTypes.func.isRequired
+    onRatingChanges: PropTypes.func
 }
-
-/*{card.openingHours.length !== 0 ? <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} /> : ''}*/
