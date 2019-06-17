@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import OutsideClickHandler from 'react-outside-click-handler'
+import PropTypes from 'prop-types'
 import {getLocal} from "../services";
 import {RatingSection, RatingButton, RatingView} from './CafeCardStyles.js'
 import StaticRating from './StaticRating'
@@ -31,8 +32,14 @@ export default function CafeRating({score, counter, cardId, onRatingChanges}) {
         <OutsideClickHandler onOutsideClick={() => setIsStatic(true)} >
             <RatingSection>
                 <RatingView >{isStatic ? <StaticRating score={score} counter={counter} /> : <DynamicRating />}</RatingView>
-                <RatingButton onClick={handleToggleRating} btnStyle={isStatic}>{isStatic ? "Add rating" : "Submit"}</RatingButton>
+                <RatingButton onClick={handleToggleRating} btnStyle={isStatic}>{isStatic ? `Add rating ★ ${counter} ${counter===1 ? `review`: `reviews`}` : "Submit"}</RatingButton>
             </RatingSection>
         </OutsideClickHandler>
     )
+}
+
+CafeRating.propTypes = {
+    score: PropTypes.objectOf(PropTypes.number).isRequired,
+    counter: PropTypes.number.isRequired,
+    onRatingChanges: PropTypes.func.isRequired
 }

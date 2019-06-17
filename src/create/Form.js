@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 import {getLocal} from "../services";
 import {FormStyle, ImageDiv, FormLabel, FileInput, UploadedImage, AddCardButton} from './FormStyles'
 import LabelInput from './LabelInput'
@@ -41,10 +42,11 @@ export default function Form ({onFormSubmit, history}) {
         const rating = getLocal('firstRating')
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
-        const img = image
+        const openingHours = []
+        const img = image || 'images/christin-hume-505823-unsplash.jpg'
         const alt = `Café Image of ${title}`
 
-        onFormSubmit({img, alt, title, street, district, score, counter})
+        onFormSubmit({img, alt, title, street, district, score, counter, openingHours})
 
         history.push('/')
        
@@ -67,4 +69,9 @@ export default function Form ({onFormSubmit, history}) {
             <AddCardButton position={image}>Add café</AddCardButton>
         </FormStyle>
     )
+}
+
+Form.propTypes = {
+  onFormSubmit: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 }

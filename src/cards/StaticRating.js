@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import StaticRatingCategory from './StaticRatingCategory'
 import WorkIcon from '../images/WorkAtmosphereY.png'
 import WlanIcon from '../images/WLANY.png'
@@ -16,4 +17,9 @@ export default function StaticRating({score, counter}) {
             <StaticRatingCategory colour={`#F2F5F5`} label={`Coffee`} length={rating[2]} icon={CupIcon} />
         </>
     )
+}
+
+StaticRating.propTypes = {
+    score: PropTypes.objectOf(PropTypes.number).isRequired,
+    counter: PropTypes.number.isRequired
 }

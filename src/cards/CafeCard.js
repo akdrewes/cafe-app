@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import {CardStyle, CardBackgroundColor, Image, CafeInfo, CafeTitle, CafeAddress} from './CafeCardStyles.js'
 import CafeRating from './CafeRating'
 import WeeklyOpeningHours from './WeeklyOpeningHours'
 
 export default function CafeCard({card, onRatingChanges}) {
-
-    console.log(card.openingHours)
     
     const [isHidden, setOpeningHours] = useState(true)
 
+    const openingHoursDefined = card.openingHours.length !==0
+
     function handleToggleOpeningHours() {
-        setOpeningHours(!isHidden)
+        if (openingHoursDefined) {
+            setOpeningHours(!isHidden)
+        } 
     }
 
     return (
@@ -21,8 +24,24 @@ export default function CafeCard({card, onRatingChanges}) {
                 <CafeTitle>{card.title}</CafeTitle>
                 <CafeAddress>{card.street}<br/>{card.district}</CafeAddress>
             </CafeInfo>
-            <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={onRatingChanges} />
-            {card.openingHours.length !== 0 ? <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} /> : ''}
+            <CafeRating score={card.score} counter={card.counter} cardId={card._id} onRatingChanges={onRatingChanges} /> 
+            <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} />
         </CardStyle>
     )
 }
+
+CafeCard.propTypes = {
+    card: PropTypes.shape({
+        img: PropTypes.string,
+        alt: PropTypes.string,
+        title: PropTypes.string.isRequired,
+        street: PropTypes.string.isRequired,
+        district: PropTypes.string.isRequired,
+        score: PropTypes.objectOf(PropTypes.number).isRequired,
+        counter: PropTypes.number.isRequired,
+        openingHours: PropTypes.array,
+        }),
+    onRatingChanges: PropTypes.func.isRequired
+}
+
+/*{card.openingHours.length !== 0 ? <WeeklyOpeningHours openingHours={card.openingHours} hidden={isHidden} onToggleOpeningHours={handleToggleOpeningHours} /> : ''}*/

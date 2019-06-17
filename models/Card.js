@@ -31,7 +31,12 @@ const cardSchema = new  mongoose.Schema({
         type: Number,
     },
     openingHours: [
-        {day: String, time: String},
+        {day: String, 
+            time: {
+                open: String,
+                close: String,
+            },
+        }
     ]
 })
 
