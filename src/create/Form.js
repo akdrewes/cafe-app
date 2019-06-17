@@ -42,7 +42,7 @@ export default function Form ({onFormSubmit, history}) {
         const rating = getLocal('firstRating')
         const score = {workAtmosphere: rating[0], wlan: rating[1], coffee: rating[2]}
         const counter = 1
-        const openingHours = [{day: `tbd`, time: {open: `tbd`, close: `tbd`}}]
+        const openingHours = []
         const img = image || 'images/christin-hume-505823-unsplash.jpg'
         const alt = `Café Image of ${title}`
 

@@ -8,7 +8,7 @@ export default function CafeCard({card, onRatingChanges}) {
     
     const [isHidden, setOpeningHours] = useState(true)
 
-    const openingHoursDefined = card.openingHours.length !==1
+    const openingHoursDefined = card.openingHours.length !==0
 
     function handleToggleOpeningHours() {
         if (openingHoursDefined) {

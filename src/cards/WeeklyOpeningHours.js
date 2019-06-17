@@ -7,33 +7,44 @@ import Arrowup from '../images/arrowUp.png'
 
 export default function WeeklyOpeningHours({onToggleOpeningHours, hidden, openingHours}) {
 
-    const currHours = new Date().getHours()
-    const currMin = (new Date().getMinutes()<10 ? '0' : '') + new Date().getMinutes()
-    const currTime = parseInt(''.concat(currHours,currMin))
-    const weekday = new Date().getDay()
-
-    const openingTime = openingHours[weekday].time.open
-    const closingTime = openingHours[weekday].time.close
-
-    const openingTimeHours = openingTime.slice(0,2)
-    const closingTimeHours = closingTime.slice(0,2)
-    const openingTimeMin = openingTime.slice(-2)
-    const closingTimeMin = closingTime.slice(-2)
-
-    const openingTimeHM = parseInt(''.concat(openingTimeHours, openingTimeMin))
-    const closingTimeHM = parseInt(''.concat(closingTimeHours, closingTimeMin))
-
-    const openingHoursDefined = openingHours.length !==1
+    const openingHoursDefined = openingHours.length !==0
 
     function handleLabel() {
         let label
+        if (!openingHoursDefined) {
+            label = <label>Opening Hours: tbd</label>
+        } else {
+            label = handleLabelWithDefinedOpeningHours()
+        }
+        return label
+    }
+
+    function handleLabelWithDefinedOpeningHours() {
+
+        const currHours = new Date().getHours()
+        const currMin = (new Date().getMinutes()<10 ? '0' : '') + new Date().getMinutes()
+        const currTime = parseInt(''.concat(currHours,currMin))
+        const weekday = new Date().getDay()
+
+        const openingTime = openingHours[weekday].time.open
+        const closingTime = openingHours[weekday].time.close
+
+        const openingTimeHours = openingTime.slice(0,2)
+        const closingTimeHours = closingTime.slice(0,2)
+        const openingTimeMin = openingTime.slice(-2)
+        const closingTimeMin = closingTime.slice(-2)
+
+        const openingTimeHM = parseInt(''.concat(openingTimeHours, openingTimeMin))
+        const closingTimeHM = parseInt(''.concat(closingTimeHours, closingTimeMin))
+
+        let label
+        
         if (openingTimeHM <= currTime && currTime <= closingTimeHM) {
             label = <label>Open {openingTime} - {closingTime}</label>
-        } else if (!openingHoursDefined) {
-            label = <label>Opening Hours: tbd</label>
         } else {
             label = <label>Opening Hours: Closed</label>
         }
+        
         return label
     }
 
@@ -63,10 +74,3 @@ WeeklyOpeningHours.propTypes = {
         time: PropTypes.objectOf(PropTypes.string)
     }))
 }
-
-/*<label htmlFor='openingHours' >
-                    {(openingTimeHM <= currTime, currTime <= closingTimeHM) ? 
-                    `Open ${openingTime} - ${closingTime}` 
-                        : 
-                        `Opening Hours: Closed`}
-                </label> */
