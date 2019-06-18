@@ -1,0 +1,24 @@
+---
+name: Label-Input-Field
+route: /labelinput
+menu: Components
+---
+
+import { Playground, Props } from 'docz'
+import LabelInput from './LabelInput.js'
+import { FormLabel, FormInput } from './FormStyles'
+
+# Input field with label
+
+## Basic usage
+
+<Playground>
+  <FormLabel>
+    Label name
+    <FormInput type="text" name="name" placeholder="Set placeholder" />
+  </FormLabel>
+</Playground>
+
+## Properties
+
+<Props of={LabelInput} />
