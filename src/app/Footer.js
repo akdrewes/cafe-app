@@ -6,18 +6,19 @@ import {NavLink} from 'react-router-dom'
 const FooterStyle = styled.footer`
     background: #F2F5F5;
     border-top: 1px solid #53736A;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `
 
 const NavButton = styled(NavLink)`
+    margin: 0 0 35px;
     height: 50px;
     width: 50px;
     background: #77A6A1;
     border: 2px solid white;
     border-radius: 50%;
-    position: absolute;
-    top: -25px;
-    left: 165px;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
