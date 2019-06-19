@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const FooterStyle = styled.footer`
-    background: #F2F5F5;
-    border-top: 1px solid #53736A;
-    position: relative;
+  background: #f2f5f5;
+  border-top: 1px solid #53736a;
+  position: relative;
 `
 
 const NavButton = styled(NavLink)`
@@ -36,20 +36,20 @@ const NavButton = styled(NavLink)`
 `
 
 export const NavIcon = styled.img`
-    width: 70%;
+  width: 70%;
 `
 
-export default function Footer({path, icon}) {
-    return(
-        <FooterStyle>
-            <NavButton to={path}>
-                <NavIcon src={icon}/>
-            </NavButton>
-        </FooterStyle>
-    )
+export default function Footer({ path, icon }) {
+  return (
+    <FooterStyle>
+      <NavButton to={path}>
+        <NavIcon src={icon} />
+      </NavButton>
+    </FooterStyle>
+  )
 }
 
 Footer.propTypes = {
-    path: PropTypes.string.isRequired,
-    icon: PropTypes.elementType
+  path: PropTypes.string.isRequired,
+  icon: PropTypes.elementType,
 }

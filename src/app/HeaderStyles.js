@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
 export const Header = styled.header`
-    background: #F2F5F5;
-    border-bottom: 1px solid #53736A;
-    position: relative;
+  background: #f2f5f5;
+  border-bottom: 1px solid #53736a;
+  position: relative;
 `
 
 export const Logo = styled.h1`
