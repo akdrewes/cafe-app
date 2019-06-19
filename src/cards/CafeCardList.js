@@ -38,6 +38,7 @@ export default function CafeCardList({ cards, onRatingChanges }) {
 CafeCardList.propTypes = {
   cards: PropTypes.array.isRequired,
   card: PropTypes.shape({
+    _id: PropTypes.string,
     score: PropTypes.objectOf(PropTypes.number).isRequired,
     counter: PropTypes.number.isRequired,
   }),
