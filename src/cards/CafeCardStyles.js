@@ -44,13 +44,14 @@ export const CafeTitle = styled.h2`
 export const CafeAddress = styled.p``
 
 export const RatingSection  = styled.section`
+    height: 120px;
     padding: 0 25px;
     position: absolute;
     top: 370px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 75% 15%;
-    grid-row-gap: 10%;
+    grid-template-rows: 78% 18%;
+    grid-row-gap: 4%;
 `
 
 export const RatingButton = styled.button`
