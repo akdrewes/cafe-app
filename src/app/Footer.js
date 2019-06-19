@@ -6,23 +6,33 @@ import {NavLink} from 'react-router-dom'
 const FooterStyle = styled.footer`
     background: #F2F5F5;
     border-top: 1px solid #53736A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
 `
 
 const NavButton = styled(NavLink)`
-    margin: 0 0 35px;
     height: 50px;
     width: 50px;
     background: #77A6A1;
     border: 2px solid white;
     border-radius: 50%;
-    position: relative;
+    position: absolute;
+    top: -25px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 100;
+
+    @media (min-width: 320px) {
+        left: 135px;
+    }
+
+    @media (min-width: 375px) {
+        left: 162.5px;
+    }
+
+    @media (min-width: 414px) {
+        left: 182px;
+    }
 `
 
 export const NavIcon = styled.img`
