@@ -45,13 +45,12 @@ export const CafeAddress = styled.p``
 
 export const RatingSection  = styled.section`
     padding: 0 25px;
-    height: 100px;
     position: absolute;
     top: 370px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 80% 20%;
-    grid-row-gap: 10px;
+    grid-template-rows: 75% 15%;
+    grid-row-gap: 10%;
 `
 
 export const RatingButton = styled.button`
