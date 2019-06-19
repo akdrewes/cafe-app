@@ -10,17 +10,14 @@ const cardSchema = new  mongoose.Schema({
     title: {
         type: String,
         required: true,
-        get: value => value.toUpperCase(),
     },
     street: {
         type: String,
         required: true,
-        get: value => value.toUpperCase(),
     },
     district: {
         type: String,
         required: true,
-        get: value => value.toUpperCase(),
     },
     score: {
         workAtmosphere: Number,
