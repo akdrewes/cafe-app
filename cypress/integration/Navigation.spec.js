@@ -1,4 +1,4 @@
-describe('Navigation', () => {
+describe('The footer button', () => {
     it('directs to create page and back', () => {
         cy.visit('http://localhost:3000')
         cy.get('footer a').click()
