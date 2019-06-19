@@ -10,7 +10,8 @@ export const CardListStyle = styled.main`
 `
 
 export default function CafeCardList({ cards, onRatingChanges }) {
-  function handleSorting(card) {
+  
+  function sortByAverage(card) {
     const averageRating =
       (card.score.workAtmosphere + card.score.wlan + card.score.coffee) /
       (card.counter * 3).toFixed(2)
@@ -21,7 +22,8 @@ export default function CafeCardList({ cards, onRatingChanges }) {
     <CardListStyle>
       {cards
         .slice()
-        .sort((a, b) => handleSorting(b) - handleSorting(a))
+        .sort((a, b) => sortByAverage(b) - sortByAverage(a))
+        .sort((a, b) => b.counter - a.counter)
         .map(card => (
           <CafeCard
             key={card._id}
