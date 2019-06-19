@@ -9,9 +9,9 @@ import CupIcon from '../images/CupY.png'
 import CupIconDisabled from '../images/CupN.png'
 
 export default function DynamicRating() {
-  const [activeWorkIndex, setActiveWorkIndex] = useState(null)
-  const [activeWlanIndex, setActiveWlanIndex] = useState(null)
-  const [activeCoffeeIndex, setActiveCoffeeIndex] = useState(null)
+  const [activeWorkIndex, setActiveWorkIndex] = useState()
+  const [activeWlanIndex, setActiveWlanIndex] = useState()
+  const [activeCoffeeIndex, setActiveCoffeeIndex] = useState()
 
   useEffect(() => {
     setLocal('userRating', [

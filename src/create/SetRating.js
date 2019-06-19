@@ -16,7 +16,11 @@ export default function SetRating() {
     const [activeCoffeeIndex, setActiveCoffeeIndex] = useState()
     
     useEffect(() => {
-        setLocal('firstRating', [activeWorkIndex + 1, activeWlanIndex + 1, activeCoffeeIndex + 1])
+        setLocal('firstRating', [
+          activeWorkIndex + 1,
+          activeWlanIndex + 1,
+          activeCoffeeIndex + 1
+        ])
     }, [activeWorkIndex, activeWlanIndex, activeCoffeeIndex])
 
   const handleToggleWorkIcon = index => {
