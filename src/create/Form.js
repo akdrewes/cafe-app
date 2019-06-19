@@ -17,6 +17,7 @@ const CLOUDNAME = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
 const PRESET = process.env.REACT_APP_CLOUDINARY_PRESET
 
 export default function Form({ onFormSubmit, history }) {
+
   const [image, setImage] = useState('')
 
   function upload(event) {
@@ -38,6 +39,17 @@ export default function Form({ onFormSubmit, history }) {
 
   function onImageSave(res) {
     setImage(res.data.url)
+  }
+
+
+  function checkValidation(event) {
+    const rating = getLocal('firstRating')
+    if (rating.every(item => item === null)) {
+      alert('Error: Please give us your first rating :)')
+      event.preventDefault()
+      return false
+    }
+    handleSubmit(event)
   }
 
   function handleSubmit(event) {
@@ -70,8 +82,9 @@ export default function Form({ onFormSubmit, history }) {
     history.push('/')
   }
 
+
   return (
-    <FormStyle onSubmit={handleSubmit}>
+    <FormStyle onSubmit={checkValidation}>
       <LabelInput
         text={`Name of the café`}
         name={`title`}

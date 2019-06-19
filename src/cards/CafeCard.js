@@ -51,6 +51,7 @@ export default function CafeCard({ card, onRatingChanges }) {
 
 CafeCard.propTypes = {
     card: PropTypes.shape({
+        _id: PropTypes.string,
         img: PropTypes.string,
         alt: PropTypes.string,
         title: PropTypes.string.isRequired,
@@ -60,5 +61,6 @@ CafeCard.propTypes = {
         counter: PropTypes.number.isRequired,
         openingHours: PropTypes.array,
         }),
-    onRatingChanges: PropTypes.func
+    onRatingChanges: PropTypes.func,
+    isHidden: PropTypes.bool
 }

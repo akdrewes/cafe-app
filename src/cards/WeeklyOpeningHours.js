@@ -89,6 +89,7 @@ WeeklyOpeningHours.propTypes = {
   hidden: PropTypes.bool.isRequired,
   openingHours: PropTypes.arrayOf(
     PropTypes.shape({
+      _id: PropTypes.string,
       day: PropTypes.string,
       time: PropTypes.objectOf(PropTypes.string),
     })
