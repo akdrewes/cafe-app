@@ -65,7 +65,7 @@ export default function Form({ onFormSubmit, history }) {
     }
     const counter = 1
     const openingHours = []
-    const img = image || 'images/christin-hume-505823-unsplash.jpg'
+    const img = image || '/images/christin-hume-505823-unsplash.jpg'
     const alt = `Café Image of ${title}`
 
     onFormSubmit({
