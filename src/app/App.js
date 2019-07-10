@@ -4,6 +4,7 @@ import { getCards, patchCard, postCard } from '../services'
 import GlobalStyles from '../misc/GlobalStyles'
 import { Header, Logo } from '../app/HeaderStyles'
 import AppGrid from './AppGrid'
+import Filter from './Filter'
 import CafeCardsPage from '../cards/CafeCardsPage'
 import CreatePage from '../create/CreatePage'
 
@@ -61,6 +62,7 @@ export default function App() {
         <AppGrid>
           <Header>
             <Logo>coffeeWorkers</Logo>
+            <Filter />
           </Header>
           <Switch>
             <Route
